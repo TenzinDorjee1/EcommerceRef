@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * @author Tenzin Dorjee
+ *
+ */
 public class Selling {
 	private double price;
 	private String category;
