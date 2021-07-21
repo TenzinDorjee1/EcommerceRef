@@ -3,10 +3,11 @@ public class HomePage {
 	Scanner scannerIn = new Scanner(System.in);
 	
 	public String HomeOptions(){
-		System.out.println("What would you like to do? type 'Sell' Item(s), 'Buy' Item(s), Go to 'Product Page'");
+		while(true) {
+		System.out.println("Home Page: What would you like to do? type 'Sell' Item(s), 'Buy' Item(s), Go to 'Product Page'");
 		String homePageChoice = scannerIn.nextLine();
 		if(homePageChoice.equalsIgnoreCase("Sell")) {
-			System.out.println("SELL ITEM /n");
+			System.out.println("SELL ITEM \n");
 				
 				System.out.println("What is the name of the item?");
 				String sellItemName = scannerIn.nextLine();
@@ -28,6 +29,7 @@ public class HomePage {
 				
 				float sellItemPriceFloat = Float.parseFloat(sellItemPrice);
 				Selling sellingItem = new Selling(sellItemName, sellItemPriceFloat, sellItemCat, sellItemSize, sellItemColor, sellItemdatePosted);
+				
 		}
 		
 		else if (homePageChoice.equalsIgnoreCase("Buy")) {
@@ -43,6 +45,7 @@ public class HomePage {
 		}
 		return homePageChoice;
 		
+	}
 	}
 
 }
