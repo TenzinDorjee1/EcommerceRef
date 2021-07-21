@@ -1,13 +1,12 @@
 import java.util.Scanner;
 public class HomePage {
 	Scanner scannerIn = new Scanner(System.in);
-	
 	public String HomeOptions(){
 		while(true) {
 		System.out.println("Home Page: What would you like to do? type 'Sell' Item(s), 'Buy' Item(s), Go to 'Product Page'");
 		String homePageChoice = scannerIn.nextLine();
 		if(homePageChoice.equalsIgnoreCase("Sell")) {
-			System.out.println("SELL ITEM \n");
+			System.out.println("SELL ITEM: \n");
 				
 				System.out.println("What is the name of the item?");
 				String sellItemName = scannerIn.nextLine();
@@ -27,12 +26,16 @@ public class HomePage {
 				System.out.println("what is the date posted of the item (ex.2021/07/23)");
 				String sellItemdatePosted = scannerIn.nextLine();	
 				
-				float sellItemPriceFloat = Float.parseFloat(sellItemPrice);
-				Selling sellingItem = new Selling(sellItemName, sellItemPriceFloat, sellItemCat, sellItemSize, sellItemColor, sellItemdatePosted);
+				//float sellItemPriceFloat = Float.parseFloat(sellItemPrice);
+				Selling sellingItem = new Selling(sellItemName, sellItemPrice, sellItemCat, sellItemSize, sellItemColor, sellItemdatePosted);
 				
 		}
 		
 		else if (homePageChoice.equalsIgnoreCase("Buy")) {
+			
+		}
+		
+		else if (homePageChoice.equalsIgnoreCase("Shopping Cart")) {
 			
 		}
 		

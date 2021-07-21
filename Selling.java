@@ -8,15 +8,17 @@ import java.util.Scanner;
  */
 public class Selling {
 	private String name;
-	private float price;
+	private String price;
 	private String category;
 	private String size;
 	private String color;
 	private String datePosted;
+	
+	ArrayList<String> itemSellArr = new ArrayList<String>();
 
 
 
-public Selling(String name, float sellItemPrice, String category, String size, String color, String datePosted) {
+public Selling(String name, String sellItemPrice, String category, String size, String color, String datePosted) {
 
 	this.price = sellItemPrice;
 	this.category = category;
@@ -24,12 +26,19 @@ public Selling(String name, float sellItemPrice, String category, String size, S
 	this.color = color;
 	this.datePosted = datePosted;
 	
-	System.out.println(price);
+	itemSellArr.add(price);
+	itemSellArr.add(category);
+	itemSellArr.add(size);
+	itemSellArr.add(color);
+	itemSellArr.add(datePosted);
+	
+	for (int i = 0; i <itemSellArr.size(); i++) {
+		System.out.println(itemSellArr.get(i));
+	}
 	
 }
 
-public String getName(){
-	System.out.println(name);
+public String getName(){;
 	return name;
 }
 
@@ -39,11 +48,12 @@ public void setName(String name) {
 	
 }
 
-public float getPrice(){
+public String getPrice(){
 	return price;
 }
 
-public void setPrice(float price) {
+public void setPrice(String price) {
+	itemSellArr.add(price);
 	this.price = price;
 }
 
@@ -53,7 +63,9 @@ public String getCategory() {
 	return category;
 }
 public void setCategory(String category) {
+	
 	this.category = category;
+	itemSellArr.add(category);
 }
 
 
@@ -62,7 +74,9 @@ public String getSize() {
 	return size;
 }
 public void setSize(String size) {
+	
 	this.size = size;
+	itemSellArr.add(size);
 }
 
 
@@ -72,5 +86,15 @@ public String getColor() {
 }
 public void setColor(String color) {
 	this.color = color;
+	itemSellArr.add(color);
+}
+
+public String getDatePosted() {
+	return datePosted;
+}
+
+public void setDatePosted() {
+	this.datePosted = datePosted;
+	itemSellArr.add(datePosted);
 }
 }
