@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class HomePage {
+	Scanner scannerIn = new Scanner(System.in);
+	
+	public String HomeOptions(){
+		System.out.println("What would you like to do? type 'Sell' Item(s), 'Buy' Item(s), Go to 'Product Page'");
+		String homePageChoice = scannerIn.nextLine();
+		if(homePageChoice.equalsIgnoreCase("Sell")) {
+			System.out.println("SELL ITEM /n");
+				
+				System.out.println("What is the name of the item?");
+				String sellItemName = scannerIn.nextLine();
+				
+				System.out.println("What is the price of the item?");
+				String sellItemPrice = scannerIn.nextLine();
+				
+				System.out.println("What is the category of the item?");
+				String sellItemCat = scannerIn.nextLine();
+				
+				System.out.println("what is the size of the item (XS,S,M,L,XL or N/A)");
+				String sellItemSize = scannerIn.nextLine();
+				
+				System.out.println("what is the color of the item");
+				String sellItemColor = scannerIn.nextLine();	
+				
+				System.out.println("what is the date posted of the item (ex.2021/07/23)");
+				String sellItemdatePosted = scannerIn.nextLine();	
+				
+				float sellItemPriceFloat = Float.parseFloat(sellItemPrice);
+				Selling sellingItem = new Selling(sellItemName, sellItemPriceFloat, sellItemCat, sellItemSize, sellItemColor, sellItemdatePosted);
+		}
+		
+		else if (homePageChoice.equalsIgnoreCase("Buy")) {
+			
+		}
+		
+		else if(homePageChoice.equalsIgnoreCase("Product Page")) {
+			
+		}
+		
+		else {
+			System.out.println("Invalid Input");
+		}
+		return homePageChoice;
+		
+	}
+
+}
