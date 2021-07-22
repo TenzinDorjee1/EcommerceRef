@@ -12,6 +12,33 @@ public class HomePage {
 				
 				System.out.println("What is the name of the item?");
 				String sellItemName = scannerIn.nextLine();
+				if( sellItemName.equals("battery")||sellItemName.equals("book")) {
+					System.out.println("Sorry this item is out of stock! please enter a new item name");
+					System.out.println("What is the name of the item?");
+					String sellItem= scannerIn.nextLine();
+					System.out.println("What is the price of the item?");
+					String sellItemPrice = scannerIn.nextLine();
+					
+					System.out.println("What is the category of the item?");
+					String sellItemCat = scannerIn.nextLine();
+					
+					System.out.println("what is the size of the item (XS,S,M,L,XL or N/A)");
+					String sellItemSize = scannerIn.nextLine();
+					
+					System.out.println("what is the color of the item");
+					String sellItemColor = scannerIn.nextLine();	
+					
+					System.out.println("what is the date posted of the item (ex.2021/07/23)");
+					String sellItemdatePosted = scannerIn.nextLine();	
+					
+					//float sellItemPriceFloat = Float.parseFloat(sellItemPrice);
+					Selling sellingItem = new Selling(sellItemName, sellItemPrice, sellItemCat, sellItemSize, sellItemColor, sellItemdatePosted);
+					orderProducts.addAll(Selling.getList());
+					
+				}
+				else if(sellItemName!=("battery")) {
+					System.out.println("What is the name of the item?");
+					String sellItem= scannerIn.nextLine();
 				
 				System.out.println("What is the price of the item?");
 				String sellItemPrice = scannerIn.nextLine();
@@ -32,7 +59,7 @@ public class HomePage {
 				Selling sellingItem = new Selling(sellItemName, sellItemPrice, sellItemCat, sellItemSize, sellItemColor, sellItemdatePosted);
 				orderProducts.addAll(Selling.getList());
 		}
-		
+		}
 		else if (homePageChoice.equalsIgnoreCase("Buy")) {
 			
 		}
@@ -42,20 +69,7 @@ public class HomePage {
 		}
 		
 		else if(homePageChoice.equalsIgnoreCase("Product Page")) {
-			int productCount = 1;
-			int checkCount =0;
-			System.out.println("Product " + productCount++);
-			for(int i = 0; i < orderProducts.size();i++) {
-				checkCount++;
-				System.out.println(orderProducts.get(i));
-				if (i != 0 && checkCount % 6 == 0 && checkCount != orderProducts.size()) {
-					System.out.println("");
-					System.out.println("Product" + productCount++);
-		
-				}
-			}
-				
-			
+				System.out.println(orderProducts);
 		}
 		
 		else {

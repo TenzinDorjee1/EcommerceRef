@@ -24,8 +24,7 @@ public class ProductPage extends HomePage  {
 	}
 
 	
-	private double getShippingcosts() {
-        
+	private double getShippingcosts() { 
 		return Shippingcosts;
 	}
 	
@@ -47,18 +46,8 @@ public class ProductPage extends HomePage  {
 
 	
 	private void getProductavailability() {
-		Scanner product = new Scanner(System.in);
-		System.out.println("Please enter the item");
-	
-		if(product.equals(getOrderProducts())) {
-			System.out.println("yes the item is availabe ");
-		}
-		else {
-			System.out.println("No,the item you are searching for isn't available ");
-		}
-	
+		
 	}
-	
 	
 	private void setProductavailability(String productavailability) {
 		Productavailability = productavailability;
