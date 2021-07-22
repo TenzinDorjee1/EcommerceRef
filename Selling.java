@@ -14,18 +14,19 @@ public class Selling {
 	private String color;
 	private String datePosted;
 	
-	ArrayList<String> itemSellArr = new ArrayList<String>();
+	private static ArrayList<String> itemSellArr;
 
 
 
 public Selling(String name, String sellItemPrice, String category, String size, String color, String datePosted) {
-
+	this.name = name;
 	this.price = sellItemPrice;
 	this.category = category;
 	this.size = size;
 	this.color = color;
 	this.datePosted = datePosted;
-	
+	itemSellArr = new ArrayList<String>();
+	itemSellArr.add(name);
 	itemSellArr.add(price);
 	itemSellArr.add(category);
 	itemSellArr.add(size);
@@ -35,8 +36,12 @@ public Selling(String name, String sellItemPrice, String category, String size, 
 	for (int i = 0; i <itemSellArr.size(); i++) {
 		System.out.println(itemSellArr.get(i));
 	}
-	
 }
+public static ArrayList<String> getList(){
+	return itemSellArr;
+}
+	
+
 
 public String getName(){;
 	return name;
