@@ -9,5 +9,5 @@ public class ShoppingCart {
 	int numItems;
 	ArrayList<String> ItemBuyArr = new ArrayList<String>();
 
-	public
+	//public
 }
