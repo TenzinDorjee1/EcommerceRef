@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class HomePage {
 	Scanner scannerIn = new Scanner(System.in);
 	ArrayList<String> orderProducts = new ArrayList<>();
+	int storedPrice;
+	boolean checkIfBuy = false;
 	
 	public String HomeOptions(){
 		while(true) {
@@ -35,6 +37,7 @@ public class HomePage {
 		}
 		
 		else if (homePageChoice.equalsIgnoreCase("Buy")) {
+			
 			int productCount = 1;
 			int checkCount =0;
 			if (orderProducts.size() == 0) {
@@ -55,26 +58,52 @@ public class HomePage {
 			String buyItem = scannerIn.nextLine();
 			int buyItemInt = Integer.parseInt(buyItem);
 			int increaseIndex =0;
+			
 			for (int i =1; i <= buyItemInt; i++) {
 				
 				if (buyItemInt == 1) {
-					System.out.println("The price of the item is: " + orderProducts.get(1));
+					System.out.println("The price of the item is: " + orderProducts.get(storedPrice = 1));
+					checkIfBuy = true;
 				}
 				else if (buyItemInt == i) {
-					System.out.println("The price of the item is: " + orderProducts.get(buyItemInt + increaseIndex));
+					System.out.println("The price of the item is: " + orderProducts.get(storedPrice = buyItemInt + increaseIndex));
+					checkIfBuy = true;
 				}
 			increaseIndex += 5;
 			}
-		
-				
 			
-			
-			
-			
+
 
 		}
 		
 		else if (homePageChoice.equalsIgnoreCase("Shopping Cart")) {
+			if (checkIfBuy == true) {
+			System.out.println("The total checkout price is: " + orderProducts.get(storedPrice));
+			System.out.println("type 'finish' to buy the product");
+			String finishBuy = scannerIn.nextLine();
+				if (finishBuy.equalsIgnoreCase("finish")) {
+					System.out.println("Thank you for shopping with us!");
+					
+					orderProducts.remove(storedPrice-1);
+					orderProducts.remove(storedPrice-1);
+					orderProducts.remove(storedPrice-1);
+					orderProducts.remove(storedPrice-1);
+					orderProducts.remove(storedPrice-1);
+					orderProducts.remove(storedPrice-1);
+					
+						
+					}
+				
+					
+			
+				
+				else {
+				System.out.println("");
+				}
+			}
+			else {
+				System.out.println("There is nothing in the Shopping Cart!");
+			}
 			
 		}
 		
