@@ -8,7 +8,7 @@ public class HomePage {
 
 	public String HomeOptions(){
 		while(true) {
-			System.out.println("Home Page: What would you like to do? type 'Sell' Item(s), 'Buy' Item(s), Go to 'Product Page',Go to 'Shopping cart'");
+			System.out.println("Home Page: What would you like to do? type 'Sell' Item(s), 'Buy' Item(s), Go to 'Product Page',Go to 'Shopping cart, or Exit");
 			String homePageChoice = scannerIn.nextLine();
 			if(homePageChoice.equalsIgnoreCase("Sell")) {
 
@@ -123,6 +123,10 @@ public class HomePage {
 					}
 				}
 			}
+			else if (homePageChoice.equalsIgnoreCase("Exit")) {
+				System.exit(0);
+			}
+			
 			else {
 				System.out.println("Invalid Input");
 			}
