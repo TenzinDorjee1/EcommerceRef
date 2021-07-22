@@ -12,7 +12,8 @@ public class HomePage {
 			String homePageChoice = scannerIn.nextLine();
 			if(homePageChoice.equalsIgnoreCase("Sell")) {
 
-				System.out.println("SELL ITEM: \n");
+				System.out.println("SELL ITEM:");
+				System.out.println("---------------------");
 
 				System.out.println("What is the name of the item?");
 				String sellItemName = scannerIn.nextLine();
@@ -38,12 +39,14 @@ public class HomePage {
 			
 			
 			else if (homePageChoice.equalsIgnoreCase("Buy")) {
-
+				System.out.println("BUY PRODUCTS");
+				System.out.println("---------------------");
 				int productCount = 1;
 				int checkCount =0;
 				if (orderProducts.size() == 0) {
 					System.out.println("No items to be bought!");
 				}
+				else {
 				for(int i = 0; i < orderProducts.size();i++) { 
 					if(i==0) {
 						System.out.println("Product:"+""+ productCount++);
@@ -73,10 +76,13 @@ public class HomePage {
 				}
 				System.out.println("Go to the 'shopping cart' in the homepage to finish purchasing your product ");	
 			}
+			}
 
 			
 			
 			else if (homePageChoice.equalsIgnoreCase("Shopping Cart")) {
+				System.out.println("SHOPPING CART");
+				System.out.println("---------------------");
 				if (checkIfBuy == true) {
 					checkIfBuy = false;
 					System.out.println("The total checkout price is: " + orderProducts.get(storedPrice));
@@ -106,6 +112,8 @@ public class HomePage {
 			
 			
 			else if(homePageChoice.equalsIgnoreCase("Product Page")) {
+				System.out.println("PRODUCT PAGE");
+				System.out.println("---------------------");
 				int productCount = 1;
 				int checkCount =0;
 				if (orderProducts.size() == 0) {
@@ -123,10 +131,12 @@ public class HomePage {
 					}
 				}
 			}
+			
+			
+			
 			else if (homePageChoice.equalsIgnoreCase("Exit")) {
 				System.exit(0);
 			}
-			
 			else {
 				System.out.println("Invalid Input");
 			}
