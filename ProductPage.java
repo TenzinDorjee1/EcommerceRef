@@ -1,37 +1,81 @@
 /*
  * @author Hala Mesallam
  */
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-public class ProductPage {
+public class ProductPage extends HomePage  {
 	private double Shippingcosts;
 	private String color;
-	private boolean Productavailability;
+	private String Productavailability;
+	private static ArrayList<String> orderProducts = new ArrayList<>();
+
 	
+	public  ProductPage() {
+		this.Shippingcosts= Shippingcosts;
+		this.color=color;
+		this.Productavailability=Productavailability;
+
+			getOrderProducts().addAll(Selling.getList());
+			for (int i=0;i<getOrderProducts().size();i++) {
+			System.out.println(getOrderProducts().get(i));
+		}
+	}
+
 	
 	private double getShippingcosts() {
+        
 		return Shippingcosts;
 	}
 	
+	
+
 	private void setShippingcosts(double shippingcosts) {
 		Shippingcosts = shippingcosts;
 	}
+	
 
 	private String getColor() {
 		return color;
 	}
-
+	
 	private void setColor(String color) {
 		this.color = color;
 	}
-
-	private boolean isProductavailability() {
-		return Productavailability;
-	}
-
-	private void setProductavailability(boolean productavailability) {
-		Productavailability = productavailability;
-	}
 	
 
+	
+	private void getProductavailability() {
+		Scanner product = new Scanner(System.in);
+		System.out.println("Please enter the item");
+	
+		if(product.equals(getOrderProducts())) {
+			System.out.println("yes the item is availabe ");
+		}
+		else {
+			System.out.println("No,the item you are searching for isn't available ");
+		}
+	
+	}
+	
+	
+	private void setProductavailability(String productavailability) {
+		Productavailability = productavailability;
+	}
+
+
+
+	public static ArrayList<String> getOrderProducts() {
+		return orderProducts;
+	}
+
+
+
+	public void setOrderProducts(ArrayList<String> orderProducts) {
+		this.orderProducts = orderProducts;
+	}
+	
+	 
 
 }

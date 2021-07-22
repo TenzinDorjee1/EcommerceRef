@@ -1,6 +1,8 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class HomePage {
 	Scanner scannerIn = new Scanner(System.in);
+	ArrayList<String> orderProducts = new ArrayList<>();
 	public String HomeOptions(){
 		while(true) {
 		System.out.println("Home Page: What would you like to do? type 'Sell' Item(s), 'Buy' Item(s), Go to 'Product Page'");
@@ -28,7 +30,7 @@ public class HomePage {
 				
 				//float sellItemPriceFloat = Float.parseFloat(sellItemPrice);
 				Selling sellingItem = new Selling(sellItemName, sellItemPrice, sellItemCat, sellItemSize, sellItemColor, sellItemdatePosted);
-				
+				orderProducts.addAll(Selling.getList());
 		}
 		
 		else if (homePageChoice.equalsIgnoreCase("Buy")) {
@@ -40,12 +42,13 @@ public class HomePage {
 		}
 		
 		else if(homePageChoice.equalsIgnoreCase("Product Page")) {
+				System.out.println(orderProducts);
+				
 			
-			//ProductPage productDetails= new ProductPage(sellItemName,sellItemPrice, sellItemCat,  sellItemColor,  sellItemdatePosted, sellItemdatePosted);
-	
 		}
 		
 		else {
+			
 			System.out.println("Invalid Input");
 		}
 		return homePageChoice;
