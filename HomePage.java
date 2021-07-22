@@ -35,14 +35,43 @@ public class HomePage {
 		}
 		
 		else if (homePageChoice.equalsIgnoreCase("Buy")) {
-//			System.out.println("What is the name of the item?");
-//			String sellItemName = scannerIn.nextLine();
-//			if( sellItemName.equals("battery")) {
-//				System.out.println("Sorry this item is out of stock!");
-//
-//			}
-//			else if(sellItemName!=("battery")) {
+			int productCount = 1;
+			int checkCount =0;
+			if (orderProducts.size() == 0) {
+				System.out.println("No items to be bought!");
+			}
+			System.out.println("Product " + productCount++);
+			for(int i = 0; i < orderProducts.size();i++) {
+				checkCount++;
+				System.out.println(orderProducts.get(i));
+				if (i != 0 && checkCount % 6 == 0 && checkCount != orderProducts.size()) {
+					System.out.println("");
+					System.out.println("Product" + productCount++);
+		
+				}
 			
+		}
+			System.out.println("Which product do you want to buy? Enter only the product number");
+			String buyItem = scannerIn.nextLine();
+			int buyItemInt = Integer.parseInt(buyItem);
+			int increaseIndex =0;
+			for (int i =1; i <= buyItemInt; i++) {
+				
+				if (buyItemInt == 1) {
+					System.out.println("The price of the item is: " + orderProducts.get(1));
+				}
+				else if (buyItemInt == i) {
+					System.out.println("The price of the item is: " + orderProducts.get(buyItemInt + increaseIndex));
+				}
+			increaseIndex += 5;
+			}
+		
+				
+			
+			
+			
+			
+
 		}
 		
 		else if (homePageChoice.equalsIgnoreCase("Shopping Cart")) {
@@ -55,13 +84,13 @@ public class HomePage {
 			if (orderProducts.size() == 0) {
 				System.out.println("No items to be sold!");
 			}
-			System.out.println("Product " + productCount++);
+			System.out.println("Product: " + productCount++);
 			for(int i = 0; i < orderProducts.size();i++) {
 				checkCount++;
 				System.out.println(orderProducts.get(i));
 				if (i != 0 && checkCount % 6 == 0 && checkCount != orderProducts.size()) {
 					System.out.println("");
-					System.out.println("Product" + productCount++);
+					System.out.println("Product: " + productCount++);
 		
 				}
 			}
