@@ -40,14 +40,9 @@ public class HomePage {
 		}
 		
 		else if(homePageChoice.equalsIgnoreCase("Product Page")) {
-			System.out.println("All The Items for Sale:");
 			
-			for (int i = 0; i < Selling.getList().size(); i++) {
-				System.out.println(Selling.getList());
-				
-			}
-				
-			
+			//ProductPage productDetails= new ProductPage(sellItemName,sellItemPrice, sellItemCat,  sellItemColor,  sellItemdatePosted, sellItemdatePosted);
+	
 		}
 		
 		else {
