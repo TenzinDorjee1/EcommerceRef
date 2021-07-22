@@ -42,7 +42,18 @@ public class HomePage {
 		}
 		
 		else if(homePageChoice.equalsIgnoreCase("Product Page")) {
-				System.out.println(orderProducts);
+			int productCount = 1;
+			int checkCount =0;
+			System.out.println("Product " + productCount++);
+			for(int i = 0; i < orderProducts.size();i++) {
+				checkCount++;
+				System.out.println(orderProducts.get(i));
+				if (i != 0 && checkCount % 6 == 0 && checkCount != orderProducts.size()) {
+					System.out.println("");
+					System.out.println("Product" + productCount++);
+		
+				}
+			}
 				
 			
 		}

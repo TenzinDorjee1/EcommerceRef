@@ -26,12 +26,12 @@ public Selling(String name, String sellItemPrice, String category, String size, 
 	this.color = color;
 	this.datePosted = datePosted;
 	itemSellArr = new ArrayList<String>();
-	itemSellArr.add(name);
-	itemSellArr.add(price);
-	itemSellArr.add(category);
-	itemSellArr.add(size);
-	itemSellArr.add(color);
-	itemSellArr.add(datePosted);
+	itemSellArr.add("Name: " + name);
+	itemSellArr.add("Price: " + price);
+	itemSellArr.add("Category: " + category);
+	itemSellArr.add("Size: " + size);
+	itemSellArr.add("Color: " + color);
+	itemSellArr.add("Date Posted: " + datePosted);
 	
 	for (int i = 0; i <itemSellArr.size(); i++) {
 		System.out.println(itemSellArr.get(i));
