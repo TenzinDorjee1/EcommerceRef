@@ -31,11 +31,12 @@ public class HomePage {
 				System.out.println("what is the date posted of the item (ex.2021/07/23)");
 				String sellItemdatePosted = scannerIn.nextLine();	
 
-				//float sellItemPriceFloat = Float.parseFloat(sellItemPrice);
 				Selling sellingItem = new Selling(sellItemName, sellItemPrice, sellItemCat, sellItemSize, sellItemColor, sellItemdatePosted);
 				orderProducts.addAll(Selling.getList());
 			}
 
+			
+			
 			else if (homePageChoice.equalsIgnoreCase("Buy")) {
 
 				int productCount = 1;
@@ -43,16 +44,16 @@ public class HomePage {
 				if (orderProducts.size() == 0) {
 					System.out.println("No items to be bought!");
 				}
-				System.out.println("Product " + productCount++);
-				for(int i = 0; i < orderProducts.size();i++) {
+				for(int i = 0; i < orderProducts.size();i++) { 
+					if(i==0) {
+						System.out.println("Product:"+""+ productCount++);
+					}	
 					checkCount++;
 					System.out.println(orderProducts.get(i));
 					if (i != 0 && checkCount % 6 == 0 && checkCount != orderProducts.size()) {
 						System.out.println("");
-						System.out.println("Product" + productCount++);
-
+						System.out.println("Product:" +""+ productCount++);
 					}
-
 				}
 				System.out.println("Which product do you want to buy? Enter only the product number");
 				String buyItem = scannerIn.nextLine();
@@ -60,7 +61,6 @@ public class HomePage {
 				int increaseIndex =0;
 
 				for (int i =1; i <= buyItemInt; i++) {
-
 					if (buyItemInt == 1) {
 						System.out.println("The price of the item is: " + orderProducts.get(storedPrice = 1));
 						checkIfBuy = true;
@@ -71,14 +71,16 @@ public class HomePage {
 					}
 					increaseIndex += 5;
 				}
-
-
-
+				System.out.println("Go to the 'shopping cart' in the homepage to finish purchasing your product ");	
 			}
 
+			
+			
 			else if (homePageChoice.equalsIgnoreCase("Shopping Cart")) {
 				if (checkIfBuy == true) {
+					checkIfBuy = false;
 					System.out.println("The total checkout price is: " + orderProducts.get(storedPrice));
+
 					System.out.println("type 'finish' to buy the product");
 					String finishBuy = scannerIn.nextLine();
 					if (finishBuy.equalsIgnoreCase("finish")) {
@@ -91,10 +93,7 @@ public class HomePage {
 						orderProducts.remove(storedPrice-1);
 						orderProducts.remove(storedPrice-1);
 
-
 					}
-
-
 					else {
 						System.out.println("");
 					}
@@ -102,40 +101,32 @@ public class HomePage {
 				else {
 					System.out.println("There is nothing in the Shopping Cart!");
 				}
-
 			}
 
+			
+			
 			else if(homePageChoice.equalsIgnoreCase("Product Page")) {
 				int productCount = 1;
 				int checkCount =0;
 				if (orderProducts.size() == 0) {
 					System.out.println("No items to be sold!");
 				}
-				
 				for(int i = 0; i < orderProducts.size();i++) {
 					if(i==0) {
 						System.out.println("Product:"+""+ productCount++);
-					}
+					}	
 					checkCount++;
 					System.out.println(orderProducts.get(i));
 					if (i != 0 && checkCount % 6 == 0 && checkCount != orderProducts.size()) {
 						System.out.println("");
 						System.out.println("Product:"+"" + productCount++);
-
 					}
 				}
-
-
-
 			}
-
 			else {
-
 				System.out.println("Invalid Input");
 			}
 			return homePageChoice;
-
 		}
 	}
-
 }
