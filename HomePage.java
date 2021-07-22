@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 public class HomePage {
-	Scanner scannerIn = new Scanner(System.in);
-	ArrayList<String> orderProducts = new ArrayList<>();
-	int storedPrice;
-	boolean checkIfBuy = false;
+	public Scanner scannerIn = new Scanner(System.in);
+	public ArrayList<String> orderProducts = new ArrayList<>();
+	public int storedPrice;
+	public boolean checkIfBuy = false;
 
 	public String HomeOptions(){
 		while(true) {
