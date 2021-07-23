@@ -9,6 +9,9 @@ README
 	prompts for which they can enter a response to in the command line.
 	
 	To run the program the user must run the Main.java file.
+	
+	Our First iteration is not OOP,however, we a striving for a OOP version for
+	iteration 2.
 
 Contact
 	if you have problems, questions, ideas, or suggestions, please contact us by our university
