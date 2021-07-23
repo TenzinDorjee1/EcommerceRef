@@ -109,7 +109,7 @@ public class HomePage {
 					System.out.println("There is nothing in the Shopping Cart!");
 				}
 			}
-
+System.out.println("Hello");
 			
 			
 			else if(homePageChoice.equalsIgnoreCase("Product Page")) {
