@@ -43,7 +43,8 @@ public class HomePage {
 				System.out.println("---------------------");
 				int productCount = 1;
 				int checkCount =0;
-				if (orderProducts.size() == 0) {
+				if(orderProducts.size() == 0) {
+				//if (Buying.checkListSize() == true || Selling.getList() == null) {
 					System.out.println("No items to be bought!");
 				}
 				else {

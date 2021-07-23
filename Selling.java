@@ -36,7 +36,12 @@ public class Selling {
 		}
 	}
 	public static ArrayList<String> getList(){
+		if (itemSellArr.size() == 0) {
+			return null;
+		}
+		else {
 		return itemSellArr;
+		}
 	}
 
 	public String getName(){
