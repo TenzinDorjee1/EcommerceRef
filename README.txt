@@ -12,6 +12,8 @@ README
 	
 	Our First iteration is not OOP,however, we a striving for a OOP version for
 	iteration 2.
+	
+	* you should test the main branch for the first iteration not the (OOP-branch-Iteration-2).
 
 Contact
 	if you have problems, questions, ideas, or suggestions, please contact us by our university
