@@ -12,10 +12,11 @@ public class HomePage {
 	private String size;
 	private String color;
 	private String datePosted;
-	Items ecommItem = new Items(name, price, category, size, color, datePosted);
+	
 
 	public String HomeOptions(){
 		while(true) {
+			Items ecommItem = new Items(name, price, category, size, color, datePosted);
 			System.out.println("Home Page: What would you like to do? type 'Sell' Item(s), 'Buy' Item(s), Go to 'Product Page',Go to 'Shopping cart, or Exit");
 			String homePageChoice = scannerIn.nextLine();
 			if(homePageChoice.equalsIgnoreCase("Sell")) {
@@ -48,6 +49,9 @@ public class HomePage {
 				ecommItem.setDatePosted(sellItemdatePosted);
 
 				System.out.println(ecommItem.getOrderProducts());
+				System.out.println(ecommItem.getCounter());
+				System.out.print(ecommItem.getPrice());
+				System.out.println(ecommItem.addItem());
 			}
 
 			

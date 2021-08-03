@@ -3,12 +3,13 @@ import java.util.ArrayList;
     
 
 public class Items {
-	private String name;
-	private String price;
-	private String category;
-	private String size;
-	private String color;
-	private String datePosted;
+	protected String name;
+	protected String price;
+	protected String category;
+	protected String size;
+	protected String color;
+	protected String datePosted;
+	private int counter = 0;
 //	private double Shippingcosts;
 //	private String Productavailability;
 	private ArrayList<String> orderProducts = new ArrayList<>();
@@ -24,15 +25,7 @@ public class Items {
 		
 	}
 	
-	public void buyItems(Items aItem) {
-		
-		
-	}
 	
-	public void sellItems(Items aItem) {
-		
-		
-	}
 	
 	public String getName() {
 		return name;
@@ -40,6 +33,7 @@ public class Items {
 	public void setName(String name) {
 		this.name = name;
 		getOrderProducts().add(name);
+	
 		
 	}
 	public String getPrice() {
@@ -85,12 +79,21 @@ public class Items {
 		getOrderProducts().add(size);
 	}
 
-	public ArrayList<String> getOrderProducts() {
+	public static ArrayList<String> getOrderProducts() {
 		return orderProducts;
 	}
 
 	public void setOrderProducts(ArrayList<String> orderProducts) {
 		this.orderProducts = orderProducts;
+		counter++;
+	}
+
+	public int getCounter() {
+		return counter;
+	}
+
+	public void setCounter(int counter) {
+		counter++;
 	}
 	
 	
