@@ -5,6 +5,14 @@ public class HomePage {
 	public ArrayList<String> orderProducts = new ArrayList<>();
 	public int storedPrice;
 	public boolean checkIfBuy = false;
+	
+	private String name;
+	private String price;
+	private String category;
+	private String size;
+	private String color;
+	private String datePosted;
+	Items ecommItem = new Items(name, price, category, size, color, datePosted);
 
 	public String HomeOptions(){
 		while(true) {
@@ -17,23 +25,29 @@ public class HomePage {
 
 				System.out.println("What is the name of the item?");
 				String sellItemName = scannerIn.nextLine();
+				ecommItem.setName(sellItemName);
+				
 				System.out.println("What is the price of the item?");
 				String sellItemPrice = scannerIn.nextLine();
-
+				ecommItem.setPrice(sellItemPrice);
+				
 				System.out.println("What is the category of the item?");
 				String sellItemCat = scannerIn.nextLine();
+				ecommItem.setCategory(sellItemCat);
 
 				System.out.println("what is the size of the item (XS,S,M,L,XL or N/A)");
 				String sellItemSize = scannerIn.nextLine();
-
+				ecommItem.setSize(sellItemSize);
+				
 				System.out.println("what is the color of the item");
 				String sellItemColor = scannerIn.nextLine();	
-
+				ecommItem.setColor(sellItemColor);
+				
 				System.out.println("what is the date posted of the item (ex.2021/07/23)");
 				String sellItemdatePosted = scannerIn.nextLine();	
+				ecommItem.setDatePosted(sellItemdatePosted);
 
-				Selling sellingItem = new Selling(sellItemName, sellItemPrice, sellItemCat, sellItemSize, sellItemColor, sellItemdatePosted);
-				orderProducts.addAll(Selling.getList());
+				System.out.println(ecommItem.getOrderProducts());
 			}
 
 			
