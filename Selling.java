@@ -4,7 +4,6 @@ import java.util.Scanner;
 /**
  * 
  * @author Tenzin Dorjee
- *
  */
 public class Selling {
 	private String name;

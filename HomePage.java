@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-public class HomePage {
+public class HomePage{
+
 	public Scanner scannerIn = new Scanner(System.in);
 	public ArrayList<String> orderProducts = new ArrayList<>();
 	public int storedPrice;
@@ -12,7 +13,7 @@ public class HomePage {
 	private String size;
 	private String color;
 	private String datePosted;
-	
+//	Items ecommItem = new Items(name, price, category, size, color, datePosted);
 
 	public String HomeOptions(){
 		while(true) {
@@ -47,14 +48,16 @@ public class HomePage {
 				System.out.println("what is the date posted of the item (ex.2021/07/23)");
 				String sellItemdatePosted = scannerIn.nextLine();	
 				ecommItem.setDatePosted(sellItemdatePosted);
-
-				System.out.println(ecommItem.getOrderProducts());
-				System.out.println(ecommItem.getCounter());
-				System.out.print(ecommItem.getPrice());
-				System.out.println(ecommItem.addItem());
+//
+//				System.out.println(ecommItem.getOrderProducts());
+//				System.out.println(ecommItem.getCounter());
+//				System.out.print(ecommItem.getPrice());
+			//	System.out.println(ecommItem.addProduct());
+				ecommItem.addProduct(orderProducts);
+				
 			}
 
-			
+		
 			
 			else if (homePageChoice.equalsIgnoreCase("Buy")) {
 				System.out.println("BUY PRODUCTS");

@@ -7,9 +7,6 @@ public class Buying {
 	private int productCount = 1;
 	private int checkCount =0;
 	
-	
-	
-	
 	 public int getProductCount() {
 		return productCount;
 	}

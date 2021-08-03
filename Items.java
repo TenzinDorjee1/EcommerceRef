@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
     
 
-public class Items {
+public class Items  {
 	protected String name;
 	protected String price;
 	protected String category;
@@ -10,6 +10,7 @@ public class Items {
 	protected String color;
 	protected String datePosted;
 	private int counter = 0;
+	public ArrayList<String> productList = new ArrayList<>();
 //	private double Shippingcosts;
 //	private String Productavailability;
 	private ArrayList<String> orderProducts = new ArrayList<>();
@@ -24,9 +25,7 @@ public class Items {
 		this.datePosted = sellItemdatePosted;
 		
 	}
-	
-	
-	
+
 	public String getName() {
 		return name;
 	}
@@ -79,7 +78,7 @@ public class Items {
 		getOrderProducts().add(size);
 	}
 
-	public static ArrayList<String> getOrderProducts() {
+	public ArrayList<String> getOrderProducts() {
 		return orderProducts;
 	}
 
@@ -95,6 +94,17 @@ public class Items {
 	public void setCounter(int counter) {
 		counter++;
 	}
+
+	public ArrayList<String> addProduct(ArrayList<String> OrderProducts) {
+		//for (int i=0;i<getOrderProducts().size();i++) {
+			productList.addAll(getOrderProducts());
+			System.out.println(productList);
+			
+		//}
+		return productList;
+		
+	}
+
 	
 	
 
