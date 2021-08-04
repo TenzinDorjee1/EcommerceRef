@@ -1,12 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-public class HomePage{
+
+public class HomePage {
 
 	public Scanner scannerIn = new Scanner(System.in);
-	public ArrayList<String> orderProducts = new ArrayList<>();
 	public int storedPrice;
 	public boolean checkIfBuy = false;
-	public ArrayList<String> productList = new ArrayList<>();
 	
 	private String name;
 	private String price;
@@ -50,7 +49,6 @@ public class HomePage{
 				String sellItemdatePosted = scannerIn.nextLine();	
 				ecommItem.setDatePosted(sellItemdatePosted);
 
-				System.out.println(productList);
 				
 			}
 

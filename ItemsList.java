@@ -8,7 +8,6 @@ public class ItemsList extends Item {
 		
 	}
 	public ArrayList<Item> productList = new ArrayList<>();
-	private ArrayList<String> orderProducts = new ArrayList<>();
 	
 	public void addItems(Item aItem) {
 		aItem=new Item();
