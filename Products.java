@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Products extends Items {
+public class Products extends Item {
 //	public ArrayList<String> productList = new ArrayList<>();
 	
 public Products(String sellItemName, String sellItemPrice, String sellItemCat, String sellItemSize,
@@ -13,12 +13,13 @@ public Products(String sellItemName, String sellItemPrice, String sellItemCat, S
 //	
 //}
 
-public void buyItems(Items aItem) {
+
+public void buyItems(Item aItem) {
 		
 		
 	}
 	
-	public void sellItems(Items aItem) {
+	public void sellItems(Item aItem) {
 		
 		
 	}

@@ -6,6 +6,7 @@ public class HomePage{
 	public ArrayList<String> orderProducts = new ArrayList<>();
 	public int storedPrice;
 	public boolean checkIfBuy = false;
+	public ArrayList<String> productList = new ArrayList<>();
 	
 	private String name;
 	private String price;
@@ -17,7 +18,7 @@ public class HomePage{
 
 	public String HomeOptions(){
 		while(true) {
-			Items ecommItem = new Items(name, price, category, size, color, datePosted);
+			Item ecommItem = new Item(name, price, category, size, color, datePosted);
 			System.out.println("Home Page: What would you like to do? type 'Sell' Item(s), 'Buy' Item(s), Go to 'Product Page',Go to 'Shopping cart, or Exit");
 			String homePageChoice = scannerIn.nextLine();
 			if(homePageChoice.equalsIgnoreCase("Sell")) {
@@ -48,17 +49,11 @@ public class HomePage{
 				System.out.println("what is the date posted of the item (ex.2021/07/23)");
 				String sellItemdatePosted = scannerIn.nextLine();	
 				ecommItem.setDatePosted(sellItemdatePosted);
-//
-//				System.out.println(ecommItem.getOrderProducts());
-//				System.out.println(ecommItem.getCounter());
-//				System.out.print(ecommItem.getPrice());
-			//	System.out.println(ecommItem.addProduct());
-				ecommItem.addProduct(orderProducts);
+
+				System.out.println(productList);
 				
 			}
 
-		
-			
 			else if (homePageChoice.equalsIgnoreCase("Buy")) {
 				System.out.println("BUY PRODUCTS");
 				System.out.println("---------------------");
