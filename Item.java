@@ -1,17 +1,18 @@
 import java.util.ArrayList;
-
+import java.util.Scanner;
     
 
 public class Item  {
-	protected String name;
+	protected ArrayList<Item> name;
 	protected String price;
 	protected String category;
 	protected String size;
 	protected String color;
 	protected String datePosted;
+	Item ecommItem = new Item(name, price, category, size, color, datePosted);
 	
 	
-	public Item(String sellItemName, String sellItemPrice, String sellItemCat, String sellItemSize, String sellItemColor, String sellItemdatePosted) {
+	public Item(ArrayList<Item> sellItemName, String sellItemPrice, String sellItemCat, String sellItemSize, String sellItemColor, String sellItemdatePosted) {
 		this.name = sellItemName;
 		this.price = sellItemPrice;
 		this.category = sellItemCat;
@@ -24,10 +25,10 @@ public class Item  {
 	public Item() {
 	}
 
-	public String getName() {
+	public ArrayList<Item> getName() {
 		return name;
 	}
-	public void setName(String name) {
+	public void setName(ArrayList<Item> name) {
 		this.name = name;
 	
 	}
