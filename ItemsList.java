@@ -1,32 +1,73 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class ItemsList  {
+import org.junit.Test;
 
-	private final ArrayList<Item> productList = new ArrayList<Item>();
+public class ItemsList   {
+	public Item aItem;
+	public Scanner scannerIn = new Scanner(System.in);
+	ArrayList<Item> productList = new ArrayList<Item>();
+	
 
+	
 	public ItemsList() {
-		this.collectItems();
+		
 	}	
+	public Item getItemsList() {
+		return aItem;
+	}
+	public void setItemsList(Item aItem) {
+		this.aItem = aItem;
+	}
+	
 
-
-	public ArrayList<Item> getProductList() {
+	public void setAddItem(Item itemToAdd) {
+		aItem = itemToAdd;
+		productList.add(getItemsList());
+		
+		
+	}
+	
+	public ArrayList<Item> getAddItem(){
+		System.out.println(productList);
+		System.out.println(productList.size());
 		return productList;
 	}
-
-	public void collectItems() {
-		ArrayList<Item> productName = new ArrayList<Item>(); 
-				productName=productList.getName();
-		Double [] productPrice = {40.00d, 60.00d, 30.00d};
-		String [] sellItemCat=
-		String [] sellItemSize=
-		String [] sellItemdatePosted=
-		for (int i=0; i < productNames.length; i++) {
-			this.productList.add(new Item(i+1, productNames[i], productPrice[i],sellItemCat[i], 
-					      sellItemSize[i], sellItemColor[i], sellItemdatePosted[i]));
+	
+	public void displayItem() {
+		for (int i = 0; i < productList.size(); i++) {
+			System.out.println("Product: " + i);
+			System.out.println(productList.get(i));
+			
 		}
-
 	}
-
+		
+	public void buyItem() {
+		System.out.println("Please enter the Product number for the item to purchase");
+		int itemToBuy = scannerIn.nextInt();
+	
+		productList.remove(itemToBuy);
+				
+			}
+		
+	
+	
+	
 }
+
+
+
+
+
+
+
+	
+		
+
+	
+	
+	
+	
+
 
 

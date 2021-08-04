@@ -3,16 +3,17 @@ import java.util.Scanner;
     
 
 public class Item  {
-	protected ArrayList<Item> name;
-	protected String price;
-	protected String category;
-	protected String size;
-	protected String color;
-	protected String datePosted;
-	Item ecommItem = new Item(name, price, category, size, color, datePosted);
+	public Scanner scannerIn = new Scanner(System.in);
+	public String name;
+	public String price;
+	public String category;
+	public String size;
+	public String color;
+	public String datePosted;
+
 	
 	
-	public Item(ArrayList<Item> sellItemName, String sellItemPrice, String sellItemCat, String sellItemSize, String sellItemColor, String sellItemdatePosted) {
+	public Item(String sellItemName, String sellItemPrice, String sellItemCat, String sellItemSize, String sellItemColor, String sellItemdatePosted) {
 		this.name = sellItemName;
 		this.price = sellItemPrice;
 		this.category = sellItemCat;
@@ -25,25 +26,28 @@ public class Item  {
 	public Item() {
 	}
 
-	public ArrayList<Item> getName() {
+	public String getName() {
 		return name;
 	}
-	public void setName(ArrayList<Item> name) {
-		this.name = name;
+	public void setName() {
+		String sellItemName = scannerIn.nextLine();
+		this.name = sellItemName;
 	
 	}
 	public String getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
-		this.price = price;
+	public void setPrice() {
+		String sellItemPrice = scannerIn.nextLine();
+		this.price = sellItemPrice;
 		
 	}
 	public String getCategory() {
 		return category;
 	}
-	public void setCategory(String category) {
-		this.category = category;
+	public void setCategory() {
+		String sellItemCat = scannerIn.nextLine();
+		this.category = sellItemCat;
 		
 	}
 
@@ -51,26 +55,40 @@ public class Item  {
 		return color;
 	}
 
-	public void setColor(String color) {
-		this.color = color;
+	public void setColor() {
+		String sellItemColor = scannerIn.nextLine();
+		this.color = sellItemColor;
 	}
 
 	public String getDatePosted() {
 		return datePosted;
 	}
 
-	public void setDatePosted(String datePosted) {
-		this.datePosted = datePosted;
+	public void setDatePosted() {
+		String sellItemdatePosted = scannerIn.nextLine();	
+		this.datePosted = sellItemdatePosted;
 	}
 
 	public String getSize() {
 		return size;
 	}
 
-	public void setSize(String size) {
-		this.size = size;
+	public void setSize() {
+		String sellItemSize = scannerIn.nextLine();
+		this.size = sellItemSize;
+	}
+	
+
+	public String toString() {
+		
+		return "name: " + getName() + ", price: " + getPrice() + ", category: " + getCategory() + ", color: " + getColor() 
+			+ ", date posted:" + getDatePosted();
+	}
+
+		
 	}
 
 
-}
+
+
 
