@@ -19,7 +19,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 
-public class productcontroller extends SellItemController {
+
+
+public class productcontroller {
+	
+	ItemsList itemlist123;
+	
+	
+	
 	
 	//ItemsList ecommProduct=new ItemsList();
 	
@@ -75,13 +82,15 @@ public class productcontroller extends SellItemController {
     
     @FXML
     void loaddata(ActionEvent event) {
-  
-    	
-    	//ObservableList<Item> itemsList=FXCollections.observableArrayList(ecommProduct.productList);
-    	System.out.println(ecommProduct.getAddItem());
-    	ecommProduct.getAddItem();
-    	//System.out.print(productList1);
-//    	namecolumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+    	//System.out.println(super.abc);
+       itemlist123.getAddItem();
+//    	
+      	ObservableList<ItemsList> itemsList=FXCollections.observableArrayList(itemlist123);
+//    	System.out.println(ecommProduct.getAddItem());
+//  
+        //itemlist1.getAddItem();
+       	//System.out.print(super.productList1);
+//     	namecolumn.setCellValueFactory(new PropertyValueFactory<>("name"));
 //    	pricecolumn.setCellValueFactory(new PropertyValueFactory<>("price"));
 //    	sizecolumn.setCellValueFactory(new PropertyValueFactory<>("size"));
 //    	catcolumn.setCellValueFactory(new PropertyValueFactory<>("category"));
@@ -100,6 +109,12 @@ public class productcontroller extends SellItemController {
     	catcolumn.setCellValueFactory(new PropertyValueFactory<>("category"));
     	colorcolumn.setCellValueFactory(new PropertyValueFactory<>("color"));
     	datecolumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+    }
+    
+    public void myfunction(ItemsList itemlist1) {
+    	
+    	itemlist123=itemlist1;
+    	
     }
     
     

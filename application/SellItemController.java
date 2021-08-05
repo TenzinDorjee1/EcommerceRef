@@ -22,8 +22,9 @@ import java.util.ArrayList;
 import classes.*;
 
 public class SellItemController {
-	public ArrayList<Item> productList1 = new ArrayList<Item>();
-	ItemsList ecommProduct = new ItemsList();
+	//public ArrayList<Item> productList1 = new ArrayList<Item>();
+	ItemsList itemlist1 = new ItemsList();
+	String abc="Hello";
 	
 
     @FXML
@@ -82,18 +83,27 @@ public class SellItemController {
     
     @FXML
     void saveitems(ActionEvent event) {
+    	this.abc="bye";
     	String name = Namefield.getText();
     	String price = pricefield.getText();
     	String category = Catfield.getText();
     	String size = sizefield.getText();
     	String color = colorfield.getText();
     	String datePosted = datefield.getText();
+//    	Item ecommItem = new Item(name, price, category, size, color, datePosted);
+//    	productList1.add(ecommItem);
     	
     	if(name.isEmpty()||price.isEmpty()||category.isEmpty()||size.isEmpty()||color.isEmpty()||datePosted.isEmpty()) {
     		label.setText("Enter all the fields ");
     	}
     	else {
+    		Item ecommItem = new Item(name, price, category, size, color, datePosted);
     		
+        	//this.productList1.add(ecommItem);
+        	//System.out.println(productList1);
+        	itemlist1.setAddItem(ecommItem);
+        	itemlist1.displayItem();
+        
     	}
     }
     
@@ -123,24 +133,26 @@ public class SellItemController {
     
     @FXML
     void clickproductpage(ActionEvent event) throws IOException {
-    	String name = Namefield.getText();
-    	String price = pricefield.getText();
-    	String category = Catfield.getText();
-    	String size = sizefield.getText();
-    	String color = colorfield.getText();
-    	String datePosted = datefield.getText();
- 
-    	Item ecommItem = new Item(name, price, category, size, color, datePosted);
-    	productList1.add(ecommItem);
+//    	String name = Namefield.getText();
+//    	String price = pricefield.getText();
+//    	String category = Catfield.getText();
+//    	String size = sizefield.getText();
+//    	String color = colorfield.getText();
+//    	String datePosted = datefield.getText();
+// 
+//    	Item ecommItem = new Item(name, price, category, size, color, datePosted);
+//    	productList1.add(ecommItem);
     	
-    	ecommProduct.setAddItem(ecommItem);
+ //   	itemlist1.setAddItem(ecommItem);
     	//ecommProduct.displayItem();
-    	System.out.print(productList1);
+    	//System.out.println("HI");
+    	//itemlist1.getAddItem();
+    	System.out.println("123");
     	try {
     		FXMLLoader loader=new FXMLLoader(getClass().getResource("productpage.fxml"));
     		Parent root=(Parent)loader.load();
-    		//productcontroller seController=loader.getController();
-    		//seController.myfunction(name,price,category,size,color,datePosted);
+    		productcontroller Controller=loader.getController();
+    		Controller.myfunction(itemlist1);
     		Stage stage=new Stage();
       		stage.setScene(new Scene(root));
       		root.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
