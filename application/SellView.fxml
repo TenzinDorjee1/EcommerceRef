@@ -7,14 +7,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SellItemController">
    <children>
-      <Button fx:id="resetbutton" layoutX="327.0" layoutY="281.0" mnemonicParsing="false" onAction="#clearitem" prefHeight="46.0" prefWidth="65.0" text="Reset" />
-      <Label fx:id="Namelabel" layoutX="74.0" layoutY="84.0" prefHeight="23.0" prefWidth="50.0" text="Name" />
-      <Label fx:id="pricelabel" layoutX="76.0" layoutY="126.0" prefHeight="23.0" prefWidth="42.0" text="Price" />
-      <Label fx:id="sizelabel" layoutX="76.0" layoutY="218.0" prefHeight="23.0" prefWidth="42.0" text="Size" />
-      <Label fx:id="CatLabel" layoutX="62.0" layoutY="173.0" text="Category" />
-      <Label fx:id="colorlabel" layoutX="74.0" layoutY="258.0" text="color" />
-      <Label fx:id="Datelabel" layoutX="65.0" layoutY="304.0" text="DatePosted" />
-      <TextField fx:id="Namefield" layoutX="138.0" layoutY="82.0" />
+   
+      <Label fx:id="itemName" layoutX="74.0" layoutY="84.0" prefHeight="23.0" prefWidth="50.0" text="Name" />
+      <Label fx:id="itemPrice" layoutX="76.0" layoutY="126.0" prefHeight="23.0" prefWidth="42.0" text="Price" />
+      <Label fx:id="itemCat" layoutX="76.0" layoutY="218.0" prefHeight="23.0" prefWidth="42.0" text="Size" />
+      <Label fx:id="itemSize" layoutX="62.0" layoutY="173.0" text="Category" />
+      <Label fx:id="itemColor" layoutX="74.0" layoutY="258.0" text="color" />
+      <Label fx:id="itemDatePosted" layoutX="65.0" layoutY="304.0" text="DatePosted" />
+      <TextField fx:id="Namefield" onKeyTyped="#keyTyped" layoutX="138.0" layoutY="82.0" />
       <TextField fx:id="pricefield" layoutX="138.0" layoutY="124.0" />
       <TextField fx:id="Catfield" layoutX="138.0" layoutY="168.0" />
       <TextField fx:id="sizefield" layoutX="138.0" layoutY="216.0" />
