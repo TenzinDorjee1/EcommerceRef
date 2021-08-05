@@ -94,7 +94,7 @@ public class SellItemController {
 //    	productList1.add(ecommItem);
     	
     	if(name.isEmpty()||price.isEmpty()||category.isEmpty()||size.isEmpty()||color.isEmpty()||datePosted.isEmpty()) {
-    		label.setText("Enter all the fields ");
+    		label.setText("Please enter all the required fields ");
     	}
     	else {
     		Item ecommItem = new Item(name, price, category, size, color, datePosted);

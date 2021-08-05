@@ -26,9 +26,8 @@
         </columns>
       </TableView>
       <HBox layoutX="549.0" layoutY="15.0" />
-      <Button layoutX="516.0" layoutY="32.0" mnemonicParsing="false" text="close" />
-      <Button layoutX="443.0" layoutY="32.0" mnemonicParsing="false" text="Refresh" />
-      <Button layoutX="388.0" layoutY="32.0" mnemonicParsing="false" onAction="#AddItems" text="Add" />
-      <Button layoutX="314.0" layoutY="32.0" mnemonicParsing="false" onAction="#loaddata" text="load" />
+      <Button layoutX="376.0" layoutY="336.0" mnemonicParsing="false" onAction="#loaddata" prefHeight="37.0" prefWidth="83.0" text="load" />
+      <Label layoutX="27.0" layoutY="355.0" text="Click load to add the items from the selling page" textFill="#2016e4" />
+      <Label layoutX="14.0" layoutY="378.0" text="Click the Buy button in the hompage to select your prefered item to purchase" textFill="#251cd7" />
    </children>
 </AnchorPane>

@@ -57,6 +57,19 @@ public class HomepageController {
 
     }
     
+    @FXML
+    void clickCart(ActionEvent event) throws IOException {
+    	AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("Shopping.fxml"));
+		Scene homepage_scene = new Scene(homepage_parent);
+		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+		homepage_scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		homepage_scene.getRoot().setStyle("-fx-font-family: 'serif'");
+		app_stage.setScene(homepage_scene);
+		app_stage.show();
+
+
+    }
+    
     
     
 
