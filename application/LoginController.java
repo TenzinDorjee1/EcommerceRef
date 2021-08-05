@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -31,6 +32,10 @@ public class LoginController {
 	    private TextField passwordfield;
 	    
 	    @FXML
+	    private PasswordField passwordfie;
+	    
+	    
+	    @FXML
 	    private Label messageLabel;
 	    
 	    @FXML
@@ -47,7 +52,7 @@ public class LoginController {
 		
 		@FXML
 	    void clickloginb(ActionEvent event) throws IOException{
-			if (usernamefield.getText().equals("")||passwordfield.getText().equals("")){
+			if (usernamefield.getText().equals("")||passwordfie.getText().equals("")){
 	    		messageLabel.setText("Enter a valid username or password");
 	    	}
 	    	else {

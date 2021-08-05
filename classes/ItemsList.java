@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ItemsList  {
     public Item aItem;
     //public Scanner scannerIn = new Scanner(System.in);
-    ArrayList<Item> productList = new ArrayList<Item>();
+    public ArrayList<Item> productList = new ArrayList<Item>();
     ArrayList<Item> productListBuy = new ArrayList<Item>();
 
     public ItemsList() {
@@ -21,8 +21,8 @@ public class ItemsList  {
 
 
     public void setAddItem(Item itemToAdd) {
-        aItem = itemToAdd;
-        productList.add(getItemsList());
+        this.aItem = itemToAdd;
+        productList.add(aItem);
 
 
     }

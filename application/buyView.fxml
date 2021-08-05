@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BuyController">
+   <children>
+      <Label layoutX="212.0" layoutY="20.0" text="Buy Products">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <TreeTableView layoutX="41.0" layoutY="71.0" prefHeight="302.0" prefWidth="524.0">
+        <columns>
+          <TreeTableColumn prefWidth="75.0" text="item no." />
+          <TreeTableColumn prefWidth="75.0" text="Name" />
+            <TreeTableColumn prefWidth="75.0" text="Price" />
+            <TreeTableColumn prefWidth="75.0" text="Category" />
+            <TreeTableColumn prefWidth="75.0" text="Size" />
+            <TreeTableColumn prefWidth="75.0" text="Date" />
+            <TreeTableColumn prefWidth="75.0" text="Buy" />
+        </columns>
+      </TreeTableView>
+   </children>
+</AnchorPane>
