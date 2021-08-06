@@ -23,6 +23,7 @@ public class HomepageController {
 	private Scene sellingPage;
 	private Scene productPage;
 	private Scene buyPage;
+	private Scene shoppingCartPage;
 	@FXML
 	private Button sellbutton;
 
@@ -79,10 +80,11 @@ public class HomepageController {
 		
 		if (buyPage == null) {
 			FXMLLoader loader = new FXMLLoader((getClass().getResource("buyView.fxml")));
-			AnchorPane buyPagePane = loader.load();
-			BuyController controller = loader.getController();
-			controller.passPage((Scene)((Node) event.getSource()).getScene());
-			productPage = new Scene(buyPagePane);
+            AnchorPane buyPagePane = loader.load();
+            BuyController controller = loader.getController();
+           controller.passPage((Scene)((Node) event.getSource()).getScene());
+           buyPage = new Scene(buyPagePane);
+          
 		}
 		else {
 			Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -91,27 +93,25 @@ public class HomepageController {
 		}
 		
 		
-		
-		AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("buyView.fxml"));
-		Scene homepage_scene = new Scene(homepage_parent);
-		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-
-		app_stage.setScene(homepage_scene);
-		app_stage.show();
 
 
 	}
 
 	@FXML
 	void clickCart(ActionEvent event) throws IOException {
-		AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("Shopping.fxml"));
-		Scene homepage_scene = new Scene(homepage_parent);
-		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-	
-		
-		app_stage.setScene(homepage_scene);
-		app_stage.show();
-
+		if (shoppingCartPage == null) {
+			FXMLLoader loader = new FXMLLoader((getClass().getResource("Shopping.fxml")));
+            AnchorPane ShoppingCartPagePane = loader.load();
+            CartController controller = loader.getController();
+           controller.passPage((Scene)((Node) event.getSource()).getScene());
+           shoppingCartPage = new Scene(ShoppingCartPagePane);
+          
+		}
+		else {
+			Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+			app_stage.setScene(shoppingCartPage);
+			app_stage.show();
+		}
 
 	}
 

@@ -9,29 +9,63 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SellItemController">
    <children>
-      <Button fx:id="resetbutton" layoutX="479.0" layoutY="220.0" mnemonicParsing="false" onAction="#clearitem" prefHeight="46.0" prefWidth="95.0" text="Reset" />
-      <Label fx:id="Namelabel" layoutX="76.0" layoutY="84.0" prefHeight="23.0" prefWidth="50.0" text="Name" />
-      <Label fx:id="pricelabel" layoutX="80.0" layoutY="126.0" prefHeight="23.0" prefWidth="42.0" text="Price" />
-      <Label fx:id="sizelabel" layoutX="81.0" layoutY="218.0" prefHeight="23.0" prefWidth="42.0" text="Size" />
-      <Label fx:id="CatLabel" layoutX="76.0" layoutY="173.0" text="Category" />
-      <Label fx:id="colorlabel" layoutX="84.0" layoutY="258.0" text="color" />
-      <Label fx:id="Datelabel" layoutX="65.0" layoutY="304.0" text="DatePosted" />
+      <Button fx:id="resetbutton" layoutX="143.0" layoutY="333.0" mnemonicParsing="false" onAction="#clearitem" prefHeight="46.0" prefWidth="131.0" style="-fx-background-color: purple;" text="Reset" textFill="#fffefe">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Label fx:id="Namelabel" layoutX="26.0" layoutY="82.0" prefHeight="28.0" prefWidth="95.0" text="Name:">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Label fx:id="pricelabel" layoutX="26.0" layoutY="124.0" prefHeight="28.0" prefWidth="69.0" text="Price:">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Label fx:id="sizelabel" layoutX="37.0" layoutY="203.0" prefHeight="28.0" prefWidth="95.0" text="Size:">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Label fx:id="CatLabel" layoutX="26.0" layoutY="168.0" text="Category:">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Label fx:id="colorlabel" layoutX="26.0" layoutY="242.0" text="Color:">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Label fx:id="Datelabel" layoutX="14.0" layoutY="286.0" text="DatePosted:">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
       <TextField fx:id="Namefield" layoutX="138.0" layoutY="82.0" />
       <TextField fx:id="pricefield" layoutX="138.0" layoutY="124.0" />
       <TextField fx:id="Catfield" layoutX="138.0" layoutY="168.0" />
-      <TextField fx:id="sizefield" layoutX="138.0" layoutY="216.0" />
-      <TextField fx:id="colorfield" layoutX="138.0" layoutY="253.0" />
-      <TextField fx:id="datefield" layoutX="138.0" layoutY="299.0" />
-      <Label layoutX="23.0" layoutY="21.0" text="Selling Item" textFill="#220404">
+      <TextField fx:id="sizefield" layoutX="138.0" layoutY="203.0" />
+      <TextField fx:id="colorfield" layoutX="138.0" layoutY="242.0" />
+      <TextField fx:id="datefield" layoutX="138.0" layoutY="287.0" />
+      <Button layoutX="431.0" layoutY="333.0" mnemonicParsing="false" onAction="#clickhomepage" prefHeight="46.0" prefWidth="146.0" style="-fx-background-color: purple;" text="Homepage" textFill="#f8f8f8">
          <font>
-            <Font size="37.0" />
+            <Font size="19.0" />
+         </font></Button>
+      <Label layoutX="323.0" layoutY="100.0" prefHeight="75.0" prefWidth="255.0" text="If you want to view your product go the " textFill="#02010d" />
+      <Button layoutX="281.0" layoutY="333.0" mnemonicParsing="false" onAction="#saveitems" prefHeight="46.0" prefWidth="146.0" style="-fx-background-color: purple;" text="Sell" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Label fx:id="label" layoutX="26.0" layoutY="314.0" prefHeight="17.0" prefWidth="255.0" textFill="#ee2020" />
+      <Label layoutX="320.0" layoutY="173.0" prefHeight="17.0" prefWidth="369.0" text="Click save to save the item you want to sell" textFill="#000314" />
+      <Label layoutX="323.0" layoutY="203.0" prefHeight="17.0" prefWidth="245.0" text="Click the reset button to clear the item " textFill="#0c0640" />
+      <Label prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: purple;" />
+      <Label layoutX="26.0" layoutY="8.0" text="SELLING YOUR ITEM" textFill="#fcf9f9">
+         <font>
+            <Font size="35.0" />
          </font>
       </Label>
-      <Button layoutX="482.0" layoutY="333.0" mnemonicParsing="false" onAction="#clickhomepage" prefHeight="46.0" prefWidth="95.0" text="Homepage" />
-      <Label layoutX="14.0" layoutY="337.0" prefHeight="27.0" prefWidth="457.0" text="*if you want to see your productpage go to the  productpage button in the homepage" textFill="#1e0fd9" />
-      <Button layoutX="479.0" layoutY="276.0" mnemonicParsing="false" onAction="#saveitems" prefHeight="46.0" prefWidth="95.0" text="save" />
-      <Label fx:id="label" layoutX="138.0" layoutY="59.0" prefHeight="17.0" prefWidth="255.0" textFill="#ee2020" />
-      <Label layoutX="34.0" layoutY="356.0" prefHeight="17.0" prefWidth="369.0" text="Click save to save the item you want to sell" textFill="#1d37e4" />
-      <Label layoutX="34.0" layoutY="371.0" prefHeight="17.0" prefWidth="379.0" text="Click the reset button to clear the item and add a new one" textFill="#3623dd" />
+      <Label layoutX="323.0" layoutY="87.0" text="Please Note:" textFill="#111111">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="323.0" layoutY="144.0" text="Product page in the Homepage" />
    </children>
 </AnchorPane>

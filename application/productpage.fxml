@@ -9,12 +9,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.productcontroller">
    <children>
-      <Label layoutX="27.0" layoutY="27.0" text="PRODUCT PAGE">
+      <Label layoutX="27.0" layoutY="23.0" text="PRODUCT PAGE">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Button layoutX="477.0" layoutY="336.0" mnemonicParsing="false" onAction="#clickhomepage" prefHeight="37.0" prefWidth="96.0" text="Homepage" />
+      <Button layoutX="457.0" layoutY="336.0" mnemonicParsing="false" onAction="#clickhomepage" prefHeight="37.0" prefWidth="116.0" style="-fx-background-color: purple;" text="Homepage" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
       <TableView fx:id="itemstable" layoutX="76.0" layoutY="84.0" prefHeight="232.0" prefWidth="449.0">
         <columns>
           <TableColumn fx:id="namecolumn" prefWidth="75.0" text="Name" />
@@ -26,8 +29,18 @@
         </columns>
       </TableView>
       <HBox layoutX="549.0" layoutY="15.0" />
-      <Button layoutX="376.0" layoutY="336.0" mnemonicParsing="false" onAction="#loaddata" prefHeight="37.0" prefWidth="83.0" text="load" />
-      <Label layoutX="27.0" layoutY="355.0" text="Click load to add the items from the selling page" textFill="#2016e4" />
-      <Label layoutX="14.0" layoutY="378.0" text="Click the Buy button in the hompage to select your prefered item to purchase" textFill="#251cd7" />
+      <Button layoutX="315.0" layoutY="336.0" mnemonicParsing="false" onAction="#loaddata" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: purple;" text="load" textFill="#fffefe">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Label layoutX="15.0" layoutY="336.0" text="Click load to add the items from the selling page" textFill="#282828" />
+      <Label layoutX="14.0" layoutY="353.0" text="Click the Buy button in the hompage to select your " />
+      <Label prefHeight="68.0" prefWidth="600.0" style="-fx-background-color: purple;" />
+      <Label layoutX="14.0" layoutY="12.0" text="PRODUCT PAGE" textFill="#fffdfd">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="370.0" prefHeight="17.0" prefWidth="168.0" text="your prefered item" />
    </children>
 </AnchorPane>

@@ -1,17 +1,21 @@
 package application;
 
+import java.io.IOException;
+
 import classes.Item;
 import classes.ItemsList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 public class BuyController {
 	ItemsList allItemsList = ItemsList.getInstance();
@@ -68,13 +72,23 @@ void loadThis(ActionEvent event) {
     	itemDate.setCellValueFactory(new PropertyValueFactory<>("datePosted"));
 }
 
+@FXML 
+void buyThis(ActionEvent event) {
+	String buyNum = intToBuy.getText();
+	int buyNumInt = Integer.parseInt(buyNum);
+	allItemsList.buyItem(buyNumInt);
+}
+@FXML
+void clickHome(ActionEvent event) throws IOException {
+	Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+	app_stage.setScene(goHomePage);
+	app_stage.show();
+}
+
 public void passPage(Scene homeScene) {
 	goHomePage = homeScene;
 	
-	
 }
 
-@FXML 
-void buyThis(ActionEvent event) {
-}
+
 }

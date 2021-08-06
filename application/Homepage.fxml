@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -8,34 +10,54 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomepageController">
    <children>
-      <Label layoutX="34.0" layoutY="23.0" prefHeight="44.0" prefWidth="538.0" text="WELCOME TO OUR HOMEPAGE">
+      <Button fx:id="buybutton" layoutX="266.0" layoutY="97.0" mnemonicParsing="false" onAction="#clickBuy" prefHeight="96.0" prefWidth="126.0" style="-fx-background-color: purple;" text="Buy" textFill="WHITE">
          <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
-      <Button fx:id="buybutton" layoutX="91.0" layoutY="148.0" mnemonicParsing="false" onAction="#clickBuy" prefHeight="90.0" prefWidth="164.0" text="Buy">
-         <font>
-            <Font size="18.0" />
+            <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="sellbutton" layoutX="324.0" layoutY="148.0" mnemonicParsing="false" onAction="#clickSell" prefHeight="96.0" prefWidth="173.0" text="Sell">
+      <Button fx:id="sellbutton" layoutX="442.0" layoutY="100.0" mnemonicParsing="false" onAction="#clickSell" prefHeight="90.0" prefWidth="140.0" style="-fx-background-color: purple;" text="Sell" textFill="#f2f2f2">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Label layoutX="31.0" layoutY="100.0" prefHeight="18.0" prefWidth="538.0" text="Click on the Sell button to start shopping with us!">
+      <Label layoutX="262.0" layoutY="28.0" prefHeight="40.0" prefWidth="312.0" text="Click the Sell button to Start Shopping!">
          <font>
-            <Font size="19.0" />
+            <Font size="17.0" />
          </font></Label>
-      <Button layoutX="94.0" layoutY="258.0" mnemonicParsing="false" onAction="#clickproductpage" prefHeight="96.0" prefWidth="164.0" text="ProductPage">
+      <Button layoutX="442.0" layoutY="228.0" mnemonicParsing="false" onAction="#clickproductpage" prefHeight="96.0" prefWidth="140.0" style="-fx-background-color: purple;" text="ProductPage" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="322.0" layoutY="262.0" mnemonicParsing="false" onAction="#clickCart" prefHeight="90.0" prefWidth="173.0" text="ShoppingCart">
+      <Button layoutX="262.0" layoutY="228.0" mnemonicParsing="false" onAction="#clickCart" prefHeight="96.0" prefWidth="134.0" style="-fx-background-color: purple;" text="ShoppingCart" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
+      <Label layoutY="-2.0" prefHeight="408.0" prefWidth="237.0" style="-fx-background-color: purple;" />
+      <Label layoutX="37.0" layoutY="80.0" text="WELCOME" textFill="#fff6f6">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="142.0" text="TO" textFill="#f8f7f7">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="205.0" text="OUR" textFill="#fcfcfc">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="273.0" text="HOMEPAGE" textFill="#fffafa">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="409.0" layoutY="97.0" prefHeight="96.0" prefWidth="18.0" style="-fx-background-color: black;" />
+      <Label layoutX="266.0" layoutY="202.0" prefHeight="17.0" prefWidth="126.0" style="-fx-background-color: black;" />
+      <Label layoutX="409.0" layoutY="228.0" prefHeight="96.0" prefWidth="18.0" style="-fx-background-color: black;" />
+      <Label layoutX="442.0" layoutY="202.0" prefHeight="17.0" prefWidth="140.0" style="-fx-background-color: black;" />
    </children>
 </AnchorPane>

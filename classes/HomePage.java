@@ -13,16 +13,17 @@ public class HomePage {
 	private String size;
 	private String color;
 	private String datePosted;
+	private String UserHomePageChoice;
 	ItemsList ecommProduct = new ItemsList();
 
 	int itemNum = 0;
-	public String HomeOptions(){
+	public void HomeOptions(){
 		while(true) {
 			Item ecommItem = new Item(itemNo,name, price, category, size, color, datePosted);
 			
 			System.out.println("Home Page: What would you like to do? type 'Sell' Item(s), 'Buy' Item(s), Go to 'Product Page',Go to 'Shopping cart, or Exit");
-			String homePageChoice = scannerIn.nextLine();
-			if(homePageChoice.equalsIgnoreCase("Sell")) {
+			UserHomePageChoice = scannerIn.nextLine();
+			if(UserHomePageChoice.equalsIgnoreCase("Sell")) {
 
 				System.out.println("SELL ITEM:");
 				System.out.println("---------------------");
@@ -56,7 +57,7 @@ public class HomePage {
 
 
 			}
-			else if (homePageChoice.equalsIgnoreCase("Buy")) {
+			else if (UserHomePageChoice.equalsIgnoreCase("Buy")) {
 				System.out.println("BUY PRODUCTS");
 				System.out.println("---------------------");
 				if (ecommProduct.productList.size() == 0) {
@@ -66,13 +67,12 @@ public class HomePage {
 				else {
 					ecommProduct.displayItem();
 					System.out.println("Please enter the Product number for the item to purchase");
-					int ItemToBuy = scannerIn.nextInt();
-					ecommProduct.buyItem(ItemToBuy);
+					ecommProduct.buyItem(scannerIn.nextInt());
 				}
 
 			}
 
-			else if (homePageChoice.equalsIgnoreCase("Shopping Cart")) {
+			else if (UserHomePageChoice.equalsIgnoreCase("Shopping Cart")) {
 				System.out.println("SHOPPING CART");
 				System.out.println("---------------------");
 				if (ecommProduct.productListBuy.size() == 0) {
@@ -86,7 +86,7 @@ public class HomePage {
 				}
 			}
 
-			else if(homePageChoice.equalsIgnoreCase("Product Page")) {
+			else if(UserHomePageChoice.equalsIgnoreCase("Product Page")) {
 				System.out.println("PRODUCT PAGE");
 				System.out.println("---------------------");
 				if (ecommProduct.productList.size() == 0) {
@@ -99,13 +99,13 @@ public class HomePage {
 
 			}
 
-			else if (homePageChoice.equalsIgnoreCase("Exit")) {
+			else if (UserHomePageChoice.equalsIgnoreCase("Exit")) {
 				System.exit(0);
 			}
 			else {
 				System.out.println("Invalid Input");
 			}
-			return homePageChoice;
+			//return homePageChoice;
 		}
 	}
 

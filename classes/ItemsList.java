@@ -53,8 +53,6 @@ public class ItemsList  {
     public void buyItem(int ItemToBuy) {
         productListBuy.add(productList.get(ItemToBuy));
         productList.remove(ItemToBuy);
-
-
     }
 
     public void shoppingCartItems() {
@@ -63,6 +61,11 @@ public class ItemsList  {
 
         }
     }
+    public ArrayList<Item> getShoppingCartItems() {
+            System.out.println(productListBuy);
+            return productListBuy;
+        }
+    
 
     public double shoppingCartItemsPrice() {
         double totalSum = 0;
@@ -75,4 +78,8 @@ public class ItemsList  {
         
     }
 
+
 }
+
+
+

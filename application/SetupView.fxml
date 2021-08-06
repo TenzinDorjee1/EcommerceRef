@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -8,17 +11,46 @@
 
 <AnchorPane fx:id="loginPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
    <children>
-      <Label layoutX="54.0" layoutY="109.0" prefHeight="40.0" prefWidth="337.0" text="Please enter the correct username and password " />
-      <Label fx:id="userlabel" layoutX="66.0" layoutY="154.0" text="Username" />
-      <Label fx:id="passwordlabel" layoutX="67.0" layoutY="200.0" text="Password" />
-      <TextField fx:id="usernamefield" layoutX="150.0" layoutY="149.0" />
-      <Button layoutX="326.0" layoutY="224.0" mnemonicParsing="false" onAction="#clickloginb" prefHeight="46.0" prefWidth="65.0" text="Login" />
-      <Label fx:id="messageLabel" layoutX="67.0" layoutY="238.0" prefHeight="17.0" prefWidth="222.0" textFill="#ff0b0b" />
-      <Label layoutX="36.0" layoutY="48.0" prefHeight="66.0" prefWidth="286.0" text="WELCOME">
+      <Label fx:id="userlabel" layoutX="315.0" layoutY="126.0" text="Username">
          <font>
-            <Font size="33.0" />
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="passwordlabel" layoutX="316.0" layoutY="209.0" text="Password">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="usernamefield" layoutX="325.0" layoutY="156.0" prefHeight="27.0" prefWidth="242.0" />
+      <Button layoutX="325.0" layoutY="297.0" mnemonicParsing="false" onAction="#clickloginb" prefHeight="46.0" prefWidth="249.0" style="-fx-background-color: purple;" text="Login" textFill="#fcf0f0">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <Label fx:id="messageLabel" layoutX="325.0" layoutY="269.0" prefHeight="17.0" prefWidth="242.0" textFill="#ff0b0b" />
+      <Label layoutX="313.0" layoutY="40.0" prefHeight="53.0" prefWidth="294.0" text="WELCOME BACK,">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
          </font>
       </Label>
-      <PasswordField fx:id="passwordfie" layoutX="150.0" layoutY="195.0" prefHeight="27.0" prefWidth="161.0" />
+      <PasswordField fx:id="passwordfie" layoutX="325.0" layoutY="233.0" prefHeight="27.0" prefWidth="242.0" />
+      <Label layoutX="323.0" layoutY="82.0" text="Login to continue" textFill="#bfbbbb">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutY="-8.0" prefHeight="416.0" prefWidth="294.0" style="-fx-background-color: purple;" />
+      <Label layoutX="59.0" layoutY="108.0" text="Welcome" textFill="#fff8f8">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="173.0" text="To" textFill="#f8f3f3">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="242.0" text="Ezilla" textFill="WHITE">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

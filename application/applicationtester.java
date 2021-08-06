@@ -27,7 +27,7 @@ public class applicationtester extends Application {
 			Parent setupView = (Parent) loader.load(new FileInputStream("application/SetupView.fxml"));
 			LoginController setupController = loader.getController();
 			setupController.linkWithApplication(this);
-			scene = new Scene(setupView,500,400);
+			scene = new Scene(setupView,600,400);
 //			productcontroller productcontroller = loader.getController();
 //			productcontroller.setProduct(itemList1);
 
