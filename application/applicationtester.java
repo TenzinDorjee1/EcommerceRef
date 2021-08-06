@@ -28,16 +28,15 @@ public class applicationtester extends Application {
 			LoginController setupController = loader.getController();
 			setupController.linkWithApplication(this);
 			scene = new Scene(setupView,600,400);
-//			productcontroller productcontroller = loader.getController();
-//			productcontroller.setProduct(itemList1);
+
 
 			primaryStage.setScene(scene);
 			primaryStage.show();		
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
@@ -54,10 +53,10 @@ public class applicationtester extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();		
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		}
 	}

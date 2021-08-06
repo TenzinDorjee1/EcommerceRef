@@ -67,8 +67,6 @@ public class LoginController {
 	    		app_stage.setScene(homepage_scene);
 	    		app_stage.show();
 	    		
-//	    		FXMLLoader loader2 = new FXMLLoader();
-//	    		AnchorPane sellingPage = loader2.load(getClass().getResource("SellView.fxml"));
 	    		
 	    	}
 

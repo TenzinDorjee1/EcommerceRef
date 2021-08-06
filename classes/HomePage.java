@@ -66,8 +66,8 @@ public class HomePage {
 				}
 				else {
 					ecommProduct.displayItem();
-					System.out.println("Please enter the Product number for the item to purchase");
-					ecommProduct.buyItem(scannerIn.nextInt());
+					System.out.println("Please enter the Item Number for the item to purchase");
+					ecommProduct.buyItem(Integer.parseInt(scannerIn.nextLine()));
 				}
 
 			}

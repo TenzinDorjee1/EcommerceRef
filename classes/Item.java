@@ -40,7 +40,7 @@ public class Item  {
     public Item() {
     }
     public void setItemNo(int intemNo) {
-    	SimpleIntegerProperty str0 = new SimpleIntegerProperty();
+    	SimpleIntegerProperty str0 = new SimpleIntegerProperty(intemNo);
         this.itemNo = str0;
     }
     public int getItemNo() {
@@ -103,7 +103,7 @@ public class Item  {
 
     public String toString() {
 
-        return "name: " + getName() + ", price: " + getPrice() + ", category: " + getCategory() + ", color: " + getColor() 
+        return "ItemNo." + getItemNo() +" , name: " + getName() + ", price: " + getPrice() + ", category: " + getCategory() + ", color: " + getColor() 
         + ", date posted:" + getDatePosted();
     }
 

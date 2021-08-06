@@ -48,17 +48,9 @@ public class HomepageController {
 
 
 	}
-//	public void myfunction1(ItemsList itemlist1) {
-//
-//		this.thisList=itemlist1;
-//		System.out.println(thisList.getItemsList());
-//	}
+
 	@FXML
 	void clickproductpage(ActionEvent event) throws IOException {
-		//    	FXMLLoader loader=new FXMLLoader(getClass().getResource("productpage.fxml"));
-		//		Parent root=(Parent)loader.load();
-		//		productcontroller Controller2=loader.getController();
-		//		Controller2.myfunction2(thisList);
 		if (productPage == null) {
 			FXMLLoader loader = new FXMLLoader((getClass().getResource("productpage.fxml")));
 			AnchorPane productPagePane = loader.load();

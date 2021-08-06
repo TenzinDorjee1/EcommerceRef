@@ -53,8 +53,8 @@
             <Font size="19.0" />
          </font></Button>
       <Label fx:id="label" layoutX="26.0" layoutY="314.0" prefHeight="17.0" prefWidth="255.0" textFill="#ee2020" />
-      <Label layoutX="320.0" layoutY="173.0" prefHeight="17.0" prefWidth="369.0" text="Click save to save the item you want to sell" textFill="#000314" />
-      <Label layoutX="323.0" layoutY="203.0" prefHeight="17.0" prefWidth="245.0" text="Click the reset button to clear the item " textFill="#0c0640" />
+      <Label layoutX="320.0" layoutY="173.0" prefHeight="17.0" prefWidth="369.0" text="Click 'sell' to sell the item" textFill="#000314" />
+      <Label layoutX="323.0" layoutY="203.0" prefHeight="17.0" prefWidth="245.0" text="Click the 'reset' button to clear the item " textFill="#0c0640" />
       <Label prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: purple;" />
       <Label layoutX="26.0" layoutY="8.0" text="SELLING YOUR ITEM" textFill="#fcf9f9">
          <font>

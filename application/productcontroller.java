@@ -30,7 +30,7 @@ public class productcontroller {
 	
 	
 	
-	//ItemsList ecommProduct=new ItemsList();
+
 	
 	 @FXML
 	    private TableColumn<Item, String> namecolumn;
@@ -57,7 +57,7 @@ public class productcontroller {
 	    
 	
 	    public productcontroller() {
-			// TODO Auto-generated constructor stub
+		
 		}
 
 
@@ -79,9 +79,7 @@ public class productcontroller {
     void clickhomepage(ActionEvent event) throws IOException {
     	
     	
-//    	AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("Homepage.fxml"));
-//		Scene homepage_scene = new Scene(homepage_parent);
-//		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+
 
     	Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		app_stage.setScene(goHomePage);
@@ -92,10 +90,7 @@ public class productcontroller {
     
     @FXML
     void loaddata(ActionEvent event) {
-    	//System.out.println(super.abc);
-    	
-      
-    	System.out.println(allItemsList.getItems());
+   
    	
     	
     	
@@ -124,16 +119,6 @@ public class productcontroller {
     }
     
  
-//  public void myfunction2(ItemsList itemlist1) {
-//    	
-//    	this.allItemsListHome=itemlist1;
-//    	System.out.println(this.allItemsListHome.getItemsList());
-//    	
-//    }
-
-
-
-
 
 
 

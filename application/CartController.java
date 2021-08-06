@@ -102,7 +102,7 @@ public class CartController {
     	
     	
     	
-    	totalPriceBox.setText(String.valueOf("$" + allItemsList.shoppingCartItemsPrice()));
+    	totalPriceBox.setText((String.valueOf("$" + String.format("%,.2f",allItemsList.shoppingCartItemsPrice()))));
     }
     
     @FXML

@@ -57,10 +57,8 @@ public class BuyController {
 	    
 @FXML 
 void loadThis(ActionEvent event) {
-		System.out.println(allItemsList.getItems());
-   	
-    	
-    	
+		
+
       	ObservableList<Item> itemsList=FXCollections.observableArrayList(allItemsList.getItems());
       	thisTableView.setItems(itemsList);
       	itemNo.setCellValueFactory(new PropertyValueFactory<>("itemNo"));
@@ -77,6 +75,7 @@ void buyThis(ActionEvent event) {
 	String buyNum = intToBuy.getText();
 	int buyNumInt = Integer.parseInt(buyNum);
 	allItemsList.buyItem(buyNumInt);
+
 }
 @FXML
 void clickHome(ActionEvent event) throws IOException {

@@ -38,21 +38,25 @@ public class ItemsList  {
     }
 
     public ArrayList<Item> getItems(){
-        System.out.println(productList);
+        
         return productList;
     }
 
     public void displayItem() {
         for (int i = 0; i < productList.size(); i++) {
-            System.out.println("Product: " + i);
+            System.out.println("Product Number: " + productList.get(i).getItemNo());
             System.out.println(productList.get(i));
 
         }
     }
 
-    public void buyItem(int ItemToBuy) {
-        productListBuy.add(productList.get(ItemToBuy));
-        productList.remove(ItemToBuy);
+    public void buyItem(int itemToBuy) {
+    	itemToBuy--;
+        productListBuy.add(productList.get(itemToBuy));
+        productList.remove(itemToBuy);
+        for (int i = 0; i < productList.size(); i++) {
+        	productList.get(i).setItemNo(i+1);
+        }
     }
 
     public void shoppingCartItems() {

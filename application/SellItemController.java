@@ -20,9 +20,9 @@ import java.io.IOException;
 import classes.*;
 
 public class SellItemController {
-	//public ArrayList<Item> productList1 = new ArrayList<Item>();
+
 	ItemsList itemlist1 = ItemsList.getInstance();
-	String abc="Hello";
+
 	
 	Scene goHomePage;
 	
@@ -73,19 +73,14 @@ public class SellItemController {
     @FXML
     private Label label;
     private Scene productPage;
-    int itemNum = 0;
-//    private String name;
-//	private String price;
-//	private String category;
-//	private	String size;
-//	private String color;
-//	private String datePosted;
+    int itemNum = 1;
+
 	
 
     
     @FXML
     void saveitems(ActionEvent event) {
-    	this.abc="bye";
+    
     	
     	String name = Namefield.getText();
     	String price = pricefield.getText();
@@ -93,8 +88,7 @@ public class SellItemController {
     	String size = sizefield.getText();
     	String color = colorfield.getText();
     	String datePosted = datefield.getText();
-//    	Item ecommItem = new Item(name, price, category, size, color, datePosted);
-//    	productList1.add(ecommItem);
+
     	
     	if(name.isEmpty()||price.isEmpty()||category.isEmpty()||size.isEmpty()||color.isEmpty()||datePosted.isEmpty()) {
     		label.setText("Please enter all the required fields ");
@@ -102,37 +96,10 @@ public class SellItemController {
     	else {
     		Item ecommItem = new Item(itemNum++,name, price, category, size, color, datePosted);
         	itemlist1.setAddItem(ecommItem);
-        	//itemlist1.displayItem();
+        
         
         		
-//        		try {
-//        			if (productPage == null) {
-//        				FXMLLoader loader = new FXMLLoader((getClass().getResource("productpage.fxml")));
-//        				AnchorPane productPagePane = loader.load();
-//        				productcontroller controller = loader.getController();
-//        				controller.passPage((Scene)((Node) event.getSource()).getScene());
-//        				productPage = new Scene(productPagePane);
-//        			}
-//        			else {
-//        				Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-//        				//app_stage.setScene(productPage);
-//        				//app_stage.show();
-//        				productcontroller productcontroller = new productcontroller();
-//        				//productcontroller Controller=loader.getController();
-//        				productcontroller.myfunction(itemlist1);
-//        			}
-//        			FXMLLoader loader=new FXMLLoader(getClass().getResource("productpage.fxml"));
-//					Parent root=(Parent)loader.load();
-//					productcontroller Controller=loader.getController();
-//    				Controller.myfunction(itemlist1);
-//   				
-//    				Stage stage = new Stage();
-//    				stage.setScene(new Scene(root));
-//    				stage.show();
-//				} catch (IOException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
+
         		
      
         		
@@ -157,10 +124,6 @@ public class SellItemController {
     }
     @FXML
     void clickhomepage(ActionEvent event) throws IOException {
-//    	FXMLLoader loader=new FXMLLoader(getClass().getResource("Homepage.fxml"));
-//		Parent root=(Parent)loader.load();
-//		HomepageController Controller1=loader.getController();
-//		Controller1.myfunction1(itemlist1);
 		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		app_stage.setScene(goHomePage);
 		app_stage.show();
@@ -171,32 +134,10 @@ public class SellItemController {
     
     @FXML
     void clickproductpage(ActionEvent event) throws IOException {
-//    	String name = Namefield.getText();
-//    	String price = pricefield.getText();
-//    	String category = Catfield.getText();
-//    	String size = sizefield.getText();
-//    	String color = colorfield.getText();
-//    	String datePosted = datefield.getText();
-// 
-//    	Item ecommItem = new Item(name, price, category, size, color, datePosted);
-//    	productList1.add(ecommItem);
-    	
- //   	itemlist1.setAddItem(ecommItem);
-    	//ecommProduct.displayItem();
-    	//System.out.println("HI");
-    	//itemlist1.getAddItem();
-    	System.out.println("123");
 
-//    	
-//    	AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("productpage.fxml"));
-//		Scene homepage_scene = new Scene(homepage_parent);
-//		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-//		homepage_scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-//		homepage_scene.getRoot().setStyle("-fx-font-family: 'serif'");
-//		app_stage.setScene(homepage_scene);
-//		app_stage.show();
-//    	
-    	
+
+
+ 	    	
     	
     	
     	
