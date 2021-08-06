@@ -67,7 +67,7 @@ public class ItemsList  {
         }
     }
     public ArrayList<Item> getShoppingCartItems() {
-            System.out.println(productListBuy);
+           
             return productListBuy;
         }
     
