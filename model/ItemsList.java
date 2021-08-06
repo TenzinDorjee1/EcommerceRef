@@ -1,4 +1,4 @@
-package classes;
+package model;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -43,8 +43,9 @@ public class ItemsList  {
     }
 
     public void displayItem() {
+    	int itemNums = 1;
         for (int i = 0; i < productList.size(); i++) {
-            System.out.println("Product Number: " + productList.get(i).getItemNo());
+            System.out.println("Product Number: " + itemNums++);
             System.out.println(productList.get(i));
 
         }

@@ -8,5 +8,5 @@ module git_Ecommerce {
 	requires java.sql;
 	
 	opens application to javafx.graphics, javafx.fxml;
-	opens classes to javafx.base;
+	opens model to javafx.base;
 }

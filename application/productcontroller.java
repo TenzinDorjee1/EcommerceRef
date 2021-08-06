@@ -1,6 +1,4 @@
 package application;
-import classes.*;
-
 import java.io.IOException;
 
 import javafx.collections.FXCollections;
@@ -16,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.*;
 
 
 
@@ -90,10 +89,7 @@ public class productcontroller {
     
     @FXML
     void loaddata(ActionEvent event) {
-   
-   	
-    	
-    	
+
       	ObservableList<Item> itemsList=FXCollections.observableArrayList(allItemsList.getItems());
       	itemstable.setItems(itemsList);
     	
@@ -106,19 +102,7 @@ public class productcontroller {
 
     }
     
-    
-    
-    private void loadData() {
-    	
-    	namecolumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-    	pricecolumn.setCellValueFactory(new PropertyValueFactory<>("price"));
-    	sizecolumn.setCellValueFactory(new PropertyValueFactory<>("size"));
-    	catcolumn.setCellValueFactory(new PropertyValueFactory<>("category"));
-    	colorcolumn.setCellValueFactory(new PropertyValueFactory<>("color"));
-    	datecolumn.setCellValueFactory(new PropertyValueFactory<>("date"));
-    }
-    
- 
+
 
 
 

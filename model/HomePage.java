@@ -1,4 +1,4 @@
-package classes;
+package model;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -66,7 +66,7 @@ public class HomePage {
 				}
 				else {
 					ecommProduct.displayItem();
-					System.out.println("Please enter the Item Number for the item to purchase");
+					System.out.println("Please enter the Product Number for the item to purchase");
 					ecommProduct.buyItem(Integer.parseInt(scannerIn.nextLine()));
 				}
 
@@ -83,6 +83,15 @@ public class HomePage {
 					ecommProduct.shoppingCartItems();
 					ecommProduct.shoppingCartItemsPrice();
 					System.out.println("the total price of the the item in cart is: " + ecommProduct.shoppingCartItemsPrice());
+					System.out.println("Type finish to finalize purchase");
+					String finish = scannerIn.nextLine();
+					if (finish.equalsIgnoreCase("finish")) {
+						System.out.println("Thank you for shopping with us!");
+						System.exit(0);
+					}
+					else {
+						System.exit(0);
+					}
 				}
 			}
 

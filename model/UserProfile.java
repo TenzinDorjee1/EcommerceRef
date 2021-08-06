@@ -1,4 +1,4 @@
-package classes;
+package model;
 
 
 import java.io.IOException;
@@ -16,39 +16,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class UserProfile {
-	@FXML
-    private Label passwordlabel;
-
-    @FXML
-    private Label userlabel;
-
-    @FXML
-    private TextField usernamefield;
-
-    @FXML
-    private TextField passwordfield;
-    
-    @FXML
-    private Label messageLabel;
-
-    @FXML
-//    void clicklogin(ActionEvent event) throws IOException{
-//    	if (usernamefield.getText().equals("")){
-//    		messageLabel.setText("Enter a valid username or password");
-//    	}
-//    	else {
-//    		AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("Homepage.fxml"));
-//    		Scene homepage_scene = new Scene(homepage_parent);
-//    		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-//    		homepage_scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-//    		homepage_scene.getRoot().setStyle("-fx-font-family: 'serif'");
-//    		app_stage.setScene(homepage_scene);
-//    		app_stage.show();
-//    		
-//    	}
-//    	
-
-    //}
+	
 	private String username;
 	private String email;
 	private String firstName;

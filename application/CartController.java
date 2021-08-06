@@ -2,8 +2,6 @@ package application;
 
 import java.io.IOException;
 
-import classes.Item;
-import classes.ItemsList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,10 +18,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.*;
 
 public class CartController {
-	ItemsList allItemsList = ItemsList.getInstance();
-	Scene goHomePage;
+	public  ItemsList allItemsList = ItemsList.getInstance();
+	public Scene goHomePage;
     @FXML
     private TableColumn<Item, String> itemCat;
 

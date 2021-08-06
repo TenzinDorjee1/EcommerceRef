@@ -2,7 +2,6 @@ package application;
 
 import java.io.IOException;
 
-import classes.ItemsList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.ItemsList;
 
 public class HomepageController {
 
@@ -27,7 +27,7 @@ public class HomepageController {
 	@FXML
 	private Button sellbutton;
 
-	ItemsList thisList;
+
 
 	@FXML
 	void clickSell(ActionEvent event) throws IOException {

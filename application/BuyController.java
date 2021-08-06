@@ -2,8 +2,6 @@ package application;
 
 import java.io.IOException;
 
-import classes.Item;
-import classes.ItemsList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -16,6 +14,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import model.*;
 
 public class BuyController {
 	ItemsList allItemsList = ItemsList.getInstance();
