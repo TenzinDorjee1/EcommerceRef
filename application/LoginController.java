@@ -44,7 +44,7 @@ public class LoginController {
 	    private Label welcomemessage;
 	    
 	    @FXML
-	    private AnchorPane yes;
+	    private AnchorPane loginPage;
 
 
 		private applicationtester applicationtester;
@@ -56,13 +56,18 @@ public class LoginController {
 	    		messageLabel.setText("Enter a valid username or password");
 	    	}
 	    	else {
-	    		AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("Homepage.fxml"));
+	    		FXMLLoader loader = new FXMLLoader();
+	    		AnchorPane homepage_parent = loader.load(getClass().getResource("Homepage.fxml"));
+	    		HomepageController controller = loader.getController();
 	    		Scene homepage_scene = new Scene(homepage_parent);
 	    		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
 	    		homepage_scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 	    		homepage_scene.getRoot().setStyle("-fx-font-family: 'serif'");
 	    		app_stage.setScene(homepage_scene);
 	    		app_stage.show();
+	    		
+//	    		FXMLLoader loader2 = new FXMLLoader();
+//	    		AnchorPane sellingPage = loader2.load(getClass().getResource("SellView.fxml"));
 	    		
 	    	}
 

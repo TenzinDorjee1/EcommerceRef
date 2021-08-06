@@ -27,7 +27,7 @@ public class ItemsList  {
 
     }
 
-    public ArrayList<Item> getAddItem(){
+    public ArrayList<Item> getItems(){
         System.out.println(productList);
         return productList;
     }

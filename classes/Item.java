@@ -2,25 +2,35 @@ package classes;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javafx.beans.property.SimpleStringProperty;
+
 
 public class Item  {
     public Scanner scannerIn = new Scanner(System.in);
-    public String name;
-    public String price;
-    public String category;
-    public String size;
-    public String color;
-    public String datePosted;
+    public SimpleStringProperty name;
+    public SimpleStringProperty price;
+    public SimpleStringProperty category;
+    public SimpleStringProperty size;
+    public SimpleStringProperty color;
+    public SimpleStringProperty datePosted;
 
 
 
-    public Item(String sellItemName, String sellItemPrice, String sellItemCat, String sellItemSize, String sellItemColor, String sellItemdatePosted) {
-        this.name = sellItemName;
-        this.price = sellItemPrice;
-        this.category = sellItemCat;
-        this.size = sellItemSize;
-        this.color = sellItemColor;
-        this.datePosted = sellItemdatePosted;
+    public Item(String name, String price, String category, 
+    		String size, String color, String datePosted) {
+    	SimpleStringProperty s1  = new SimpleStringProperty(name);
+    	SimpleStringProperty s2 = new SimpleStringProperty(price);
+    	SimpleStringProperty s3 = new SimpleStringProperty(category);
+    	SimpleStringProperty s4 = new SimpleStringProperty(size);
+    	SimpleStringProperty s5 = new SimpleStringProperty(color);
+    	SimpleStringProperty s6 = new SimpleStringProperty(datePosted);
+    	
+        this.name = s1;
+        this.price = s2;
+        this.category = s3;
+        this.size = s4;
+        this.color = s5;
+        this.datePosted = s6;
 
     }
 
@@ -28,51 +38,56 @@ public class Item  {
     }
 
     public String getName() {
-        return name;
+        return name.get();
     }
     public void setName(String itemName) {
-        this.name = itemName;
+    	SimpleStringProperty str1 = new SimpleStringProperty(itemName);
+        this.name = str1;
 
     }
     public String getPrice() {
-        return price;
+        return price.get();
     }
     public void setPrice(String itemPrice) {
-    
-        this.price = itemPrice;
+    	SimpleStringProperty str2 = new SimpleStringProperty(itemPrice);
+        this.price = str2;
 
     }
     public String getCategory() {
-        return category;
+        return category.get();
     }
     public void setCategory(String itemCat) {
-        this.category = itemCat;
+    	SimpleStringProperty str3 = new SimpleStringProperty(itemCat);
+        this.category = str3;
 
     }
 
     public String getColor() {
-        return color;
+        return color.get();
     }
 
     public void setColor(String itemColor) {
-        this.color = itemColor;
+    	SimpleStringProperty str4 = new SimpleStringProperty(itemColor);
+        this.color = str4;
     }
 
     public String getDatePosted() {
-        return datePosted;
+        return datePosted.get();
     }
 
     public void setDatePosted(String itemDatePosted) {
+    	SimpleStringProperty str5 = new SimpleStringProperty(itemDatePosted);
     
-        this.datePosted = itemDatePosted;
+        this.datePosted = str5;
     }
 
     public String getSize() {
-        return size;
+        return size.get();
     }
 
     public void setSize(String itemSize) {
-        this.size = itemSize;
+    	SimpleStringProperty str6 = new SimpleStringProperty(itemSize);
+        this.size = str6;
     }
 
 

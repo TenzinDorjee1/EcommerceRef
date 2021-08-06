@@ -23,6 +23,7 @@ public class applicationtester extends Application {
 		Scene scene;
 		try {
 			Parent setupView = (Parent) loader.load(new FileInputStream("application/SetupView.fxml"));
+			
 			LoginController setupController = loader.getController();
 			setupController.linkWithApplication(this);
 			scene = new Scene(setupView,500,400);

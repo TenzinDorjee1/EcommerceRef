@@ -23,7 +23,9 @@ import javafx.stage.Stage;
 
 public class productcontroller {
 	
-	ItemsList itemlist123;
+	ItemsList allItemsList;
+	ItemsList allItemsListHome;
+	AnchorPane homepage_parent;
 	
 	
 	
@@ -69,6 +71,8 @@ public class productcontroller {
 
     @FXML
     void clickhomepage(ActionEvent event) throws IOException {
+    	
+    	
     	AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("Homepage.fxml"));
 		Scene homepage_scene = new Scene(homepage_parent);
 		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -83,19 +87,21 @@ public class productcontroller {
     @FXML
     void loaddata(ActionEvent event) {
     	//System.out.println(super.abc);
-       itemlist123.getAddItem();
-//    	
-      	ObservableList<ItemsList> itemsList=FXCollections.observableArrayList(itemlist123);
-//    	System.out.println(ecommProduct.getAddItem());
-//  
-        //itemlist1.getAddItem();
-       	//System.out.print(super.productList1);
-//     	namecolumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-//    	pricecolumn.setCellValueFactory(new PropertyValueFactory<>("price"));
-//    	sizecolumn.setCellValueFactory(new PropertyValueFactory<>("size"));
-//    	catcolumn.setCellValueFactory(new PropertyValueFactory<>("category"));
-//    	colorcolumn.setCellValueFactory(new PropertyValueFactory<>("color"));
-//    	datecolumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+    	
+       System.out.println("hello");
+//       System.out.println(this.allItemsList.getItems());
+    	allItemsList = new ItemsList();
+    	Item ecommItemTest = new Item("pen", "12.56", "school", "n/a", "black", "2021");
+    	allItemsList.setAddItem(ecommItemTest);
+      	ObservableList<Item> itemsList=FXCollections.observableArrayList(allItemsList.getItems());
+      	itemstable.setItems(itemsList);
+    	
+     	namecolumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+    	pricecolumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+    	sizecolumn.setCellValueFactory(new PropertyValueFactory<>("size"));
+    	catcolumn.setCellValueFactory(new PropertyValueFactory<>("category"));
+    	colorcolumn.setCellValueFactory(new PropertyValueFactory<>("color"));
+    	datecolumn.setCellValueFactory(new PropertyValueFactory<>("datePosted"));
 
     }
     
@@ -113,9 +119,16 @@ public class productcontroller {
     
     public void myfunction(ItemsList itemlist1) {
     	
-    	itemlist123=itemlist1;
+    	this.allItemsList=itemlist1;
+    	allItemsList.getItems();
     	
     }
+//  public void myfunction2(ItemsList itemlist1) {
+//    	
+//    	this.allItemsListHome=itemlist1;
+//    	System.out.println(this.allItemsListHome.getItemsList());
+//    	
+//    }
     
     
    

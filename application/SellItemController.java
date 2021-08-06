@@ -1,5 +1,6 @@
 package application;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,10 +15,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
 
 import classes.*;
 
@@ -98,11 +95,20 @@ public class SellItemController {
     	}
     	else {
     		Item ecommItem = new Item(name, price, category, size, color, datePosted);
-    		
-        	//this.productList1.add(ecommItem);
-        	//System.out.println(productList1);
         	itemlist1.setAddItem(ecommItem);
-        	itemlist1.displayItem();
+        	//itemlist1.displayItem();
+        	try {
+        		FXMLLoader loader=new FXMLLoader(getClass().getResource("productpage.fxml"));
+        		Parent root=(Parent)loader.load();
+        		productcontroller Controller=loader.getController();
+        		Controller.myfunction(itemlist1);
+     
+        		
+        		
+        		
+        	} catch(IOException e ) {
+        		e.printStackTrace();
+        	}
         
     	}
     }
@@ -120,6 +126,11 @@ public class SellItemController {
     }
     @FXML
     void clickhomepage(ActionEvent event) throws IOException {
+//    	FXMLLoader loader=new FXMLLoader(getClass().getResource("Homepage.fxml"));
+//		Parent root=(Parent)loader.load();
+//		HomepageController Controller1=loader.getController();
+//		Controller1.myfunction1(itemlist1);
+		
     	AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("Homepage.fxml"));
 		Scene homepage_scene = new Scene(homepage_parent);
 		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -127,6 +138,7 @@ public class SellItemController {
 		homepage_scene.getRoot().setStyle("-fx-font-family: 'serif'");
 		app_stage.setScene(homepage_scene);
 		app_stage.show();
+		
 
     }
 
@@ -148,19 +160,7 @@ public class SellItemController {
     	//System.out.println("HI");
     	//itemlist1.getAddItem();
     	System.out.println("123");
-    	try {
-    		FXMLLoader loader=new FXMLLoader(getClass().getResource("productpage.fxml"));
-    		Parent root=(Parent)loader.load();
-    		productcontroller Controller=loader.getController();
-    		Controller.myfunction(itemlist1);
-    		Stage stage=new Stage();
-      		stage.setScene(new Scene(root));
-      		root.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-    		stage.show();
-    		
-    	} catch(IOException e ) {
-    		e.printStackTrace();
-    	}
+
 //    	
 //    	AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("productpage.fxml"));
 //		Scene homepage_scene = new Scene(homepage_parent);
