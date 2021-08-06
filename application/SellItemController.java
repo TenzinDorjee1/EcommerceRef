@@ -14,13 +14,14 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
 
 import classes.*;
 
 public class SellItemController {
 	//public ArrayList<Item> productList1 = new ArrayList<Item>();
-	ItemsList itemlist1 = new ItemsList();
+	ItemsList itemlist1 = ItemsList.getInstance();
 	String abc="Hello";
 	
 	Scene goHomePage;
@@ -71,7 +72,7 @@ public class SellItemController {
 
     @FXML
     private Label label;
-    
+    private Scene productPage;
 //    private String name;
 //	private String price;
 //	private String category;
@@ -79,6 +80,7 @@ public class SellItemController {
 //	private String color;
 //	private String datePosted;
 	
+
     
     @FXML
     void saveitems(ActionEvent event) {
@@ -99,21 +101,46 @@ public class SellItemController {
     		Item ecommItem = new Item(name, price, category, size, color, datePosted);
         	itemlist1.setAddItem(ecommItem);
         	//itemlist1.displayItem();
-        	try {
-        		FXMLLoader loader=new FXMLLoader(getClass().getResource("productpage.fxml"));
-        		Parent root=(Parent)loader.load();
-        		productcontroller Controller=loader.getController();
-        		Controller.myfunction(itemlist1);
+        
+        		
+//        		try {
+//        			if (productPage == null) {
+//        				FXMLLoader loader = new FXMLLoader((getClass().getResource("productpage.fxml")));
+//        				AnchorPane productPagePane = loader.load();
+//        				productcontroller controller = loader.getController();
+//        				controller.passPage((Scene)((Node) event.getSource()).getScene());
+//        				productPage = new Scene(productPagePane);
+//        			}
+//        			else {
+//        				Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+//        				//app_stage.setScene(productPage);
+//        				//app_stage.show();
+//        				productcontroller productcontroller = new productcontroller();
+//        				//productcontroller Controller=loader.getController();
+//        				productcontroller.myfunction(itemlist1);
+//        			}
+//        			FXMLLoader loader=new FXMLLoader(getClass().getResource("productpage.fxml"));
+//					Parent root=(Parent)loader.load();
+//					productcontroller Controller=loader.getController();
+//    				Controller.myfunction(itemlist1);
+//   				
+//    				Stage stage = new Stage();
+//    				stage.setScene(new Scene(root));
+//    				stage.show();
+//				} catch (IOException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+        		
      
         		
         		
         		
-        	} catch(IOException e ) {
-        		e.printStackTrace();
+        	
         	}
         
     	}
-    }
+    
     
     
     @FXML

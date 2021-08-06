@@ -30,7 +30,7 @@ public class applicationtester extends Application {
 			scene = new Scene(setupView,500,400);
 //			productcontroller productcontroller = loader.getController();
 //			productcontroller.setProduct(itemList1);
-			scene.getRoot().setStyle("-fx-font-family: 'serif'");
+
 			primaryStage.setScene(scene);
 			primaryStage.show();		
 		} catch (FileNotFoundException e) {
@@ -51,7 +51,6 @@ public class applicationtester extends Application {
 			UserProfile setupController = loader.getController();
 			setupController.linkWithApplication(this);
 			scene = new Scene(setupView,300,300);
-			scene.getRoot().setStyle("-fx-font-family: 'serif'");
 			primaryStage.setScene(scene);
 			primaryStage.show();		
 		} catch (FileNotFoundException e) {

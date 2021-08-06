@@ -62,8 +62,8 @@ public class LoginController {
 	    		
 	    		Scene homepage_scene = new Scene(homepage_parent);
 	    		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-	    		homepage_scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-	    		homepage_scene.getRoot().setStyle("-fx-font-family: 'serif'");
+
+
 	    		app_stage.setScene(homepage_scene);
 	    		app_stage.show();
 	    		

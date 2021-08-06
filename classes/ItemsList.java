@@ -3,12 +3,22 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
+
+
 public class ItemsList  {
     public Item aItem;
     //public Scanner scannerIn = new Scanner(System.in);
     public ArrayList<Item> productList = new ArrayList<Item>();
     ArrayList<Item> productListBuy = new ArrayList<Item>();
-
+    private static ItemsList singleton;
+    
+	public static ItemsList getInstance() {
+		if (singleton == null) {
+			singleton = new ItemsList();
+		}
+		return singleton;
+	}
+    
     public ItemsList() {
 
     }    

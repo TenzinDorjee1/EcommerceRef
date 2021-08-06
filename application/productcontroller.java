@@ -22,9 +22,10 @@ import javafx.stage.Stage;
 
 public class productcontroller {
 	
-	ItemsList allItemsList;
+	ItemsList allItemsList = ItemsList.getInstance();
 	ItemsList allItemsListHome;
 	AnchorPane homepage_parent;
+	Scene goHomePage;
 	
 	
 	
@@ -53,13 +54,19 @@ public class productcontroller {
 	    private TableView<Item> itemstable;
 	    
 
-	    @FXML
+	    
+	
+	    public productcontroller() {
+			// TODO Auto-generated constructor stub
+		}
+
+
+
+		@FXML
 	    void AddItems(ActionEvent event) throws IOException {
 	    	AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("SellView.fxml"));
 			Scene homepage_scene = new Scene(homepage_parent);
 			Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-			homepage_scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			homepage_scene.getRoot().setStyle("-fx-font-family: 'serif'");
 			app_stage.setScene(homepage_scene);
 			app_stage.show();
 	    	
@@ -72,12 +79,12 @@ public class productcontroller {
     void clickhomepage(ActionEvent event) throws IOException {
     	
     	
-    	AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("Homepage.fxml"));
-		Scene homepage_scene = new Scene(homepage_parent);
-		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-		homepage_scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-		homepage_scene.getRoot().setStyle("-fx-font-family: 'serif'");
-		app_stage.setScene(homepage_scene);
+//    	AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("Homepage.fxml"));
+//		Scene homepage_scene = new Scene(homepage_parent);
+//		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+
+    	Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+		app_stage.setScene(goHomePage);
 		app_stage.show();
     	
 
@@ -88,10 +95,10 @@ public class productcontroller {
     	//System.out.println(super.abc);
     	
       
-//       System.out.println(this.allItemsList.getItems());
-    	allItemsList = new ItemsList();
-    	Item ecommItemTest = new Item("pen", "12.56", "school", "n/a", "black", "2021");
-    	allItemsList.setAddItem(ecommItemTest);
+    	System.out.println(allItemsList.getItems());
+   	
+    	
+    	
       	ObservableList<Item> itemsList=FXCollections.observableArrayList(allItemsList.getItems());
       	itemstable.setItems(itemsList);
     	
@@ -116,12 +123,7 @@ public class productcontroller {
     	datecolumn.setCellValueFactory(new PropertyValueFactory<>("date"));
     }
     
-    public void myfunction(ItemsList itemlist1) {
-    	
-    	this.allItemsList=itemlist1;
-    	allItemsList.getItems();
-    	
-    }
+ 
 //  public void myfunction2(ItemsList itemlist1) {
 //    	
 //    	this.allItemsListHome=itemlist1;
@@ -131,8 +133,12 @@ public class productcontroller {
 
 
 
-	public void setProduct(ItemsList itemList1) {
-		this.allItemsList = itemList1;
+
+
+
+
+	public void passPage(Scene homeScene) {
+		goHomePage = homeScene;
 		
 	}
     
