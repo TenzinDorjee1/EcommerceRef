@@ -27,6 +27,7 @@
       <TextField fx:id="intToBuy" layoutX="130.0" layoutY="338.0" />
       <Label layoutY="344.0" text="Item No. to Buy:" />
       <Button fx:id="hompageButton" layoutX="455.0" layoutY="338.0" mnemonicParsing="false" text="Homepage" />
-      <Button fx:id="loadButton" layoutX="368.0" layoutY="338.0" mnemonicParsing="false" onAction="#loadThis" text="Button" />
+      <Button fx:id="loadButton" layoutX="464.0" layoutY="14.0" mnemonicParsing="false" onAction="#loadThis" text="Load" />
+      <Button fx:id="buyThis" layoutX="354.0" layoutY="338.0" mnemonicParsing="false" onAction="#buyThis" text="Buy" />
    </children>
 </AnchorPane>

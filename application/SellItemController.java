@@ -73,6 +73,7 @@ public class SellItemController {
     @FXML
     private Label label;
     private Scene productPage;
+    int itemNum = 0;
 //    private String name;
 //	private String price;
 //	private String category;
@@ -85,6 +86,7 @@ public class SellItemController {
     @FXML
     void saveitems(ActionEvent event) {
     	this.abc="bye";
+    	
     	String name = Namefield.getText();
     	String price = pricefield.getText();
     	String category = Catfield.getText();
@@ -98,7 +100,7 @@ public class SellItemController {
     		label.setText("Please enter all the required fields ");
     	}
     	else {
-    		Item ecommItem = new Item(name, price, category, size, color, datePosted);
+    		Item ecommItem = new Item(itemNum++,name, price, category, size, color, datePosted);
         	itemlist1.setAddItem(ecommItem);
         	//itemlist1.displayItem();
         

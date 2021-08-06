@@ -6,7 +6,7 @@ public class HomePage {
 
 	public Scanner scannerIn = new Scanner(System.in);
 
-
+	private int itemNo;
 	private String name;
 	private String price;
 	private String category;
@@ -15,18 +15,19 @@ public class HomePage {
 	private String datePosted;
 	ItemsList ecommProduct = new ItemsList();
 
-
+	int itemNum = 0;
 	public String HomeOptions(){
 		while(true) {
-			Item ecommItem = new Item(name, price, category, size, color, datePosted);
-
+			Item ecommItem = new Item(itemNo,name, price, category, size, color, datePosted);
+			
 			System.out.println("Home Page: What would you like to do? type 'Sell' Item(s), 'Buy' Item(s), Go to 'Product Page',Go to 'Shopping cart, or Exit");
 			String homePageChoice = scannerIn.nextLine();
 			if(homePageChoice.equalsIgnoreCase("Sell")) {
 
 				System.out.println("SELL ITEM:");
 				System.out.println("---------------------");
-
+				ecommItem.setItemNo(itemNum++);
+				
 				System.out.println("What is the name of the item?");
 				
 				ecommItem.setName(scannerIn.nextLine());

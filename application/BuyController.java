@@ -48,6 +48,8 @@ public class BuyController {
 	    
 	    @FXML
 	    private TableView<Item> thisTableView;
+	    @FXML
+	    private Button buyThis;
 	    
 @FXML 
 void loadThis(ActionEvent event) {
@@ -57,7 +59,7 @@ void loadThis(ActionEvent event) {
     	
       	ObservableList<Item> itemsList=FXCollections.observableArrayList(allItemsList.getItems());
       	thisTableView.setItems(itemsList);
-    	
+      	itemNo.setCellValueFactory(new PropertyValueFactory<>("itemNo"));
      	itemName.setCellValueFactory(new PropertyValueFactory<>("name"));
     	itemPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
     	itemCat.setCellValueFactory(new PropertyValueFactory<>("size"));
@@ -70,5 +72,9 @@ public void passPage(Scene homeScene) {
 	goHomePage = homeScene;
 	
 	
+}
+
+@FXML 
+void buyThis(ActionEvent event) {
 }
 }

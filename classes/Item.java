@@ -2,11 +2,13 @@ package classes;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 
 public class Item  {
     public Scanner scannerIn = new Scanner(System.in);
+    public SimpleIntegerProperty itemNo;
     public SimpleStringProperty name;
     public SimpleStringProperty price;
     public SimpleStringProperty category;
@@ -16,15 +18,16 @@ public class Item  {
 
 
 
-    public Item(String name, String price, String category, 
+    public Item(int itemNo, String name, String price, String category, 
     		String size, String color, String datePosted) {
+    	SimpleIntegerProperty s0 = new SimpleIntegerProperty(itemNo);
     	SimpleStringProperty s1  = new SimpleStringProperty(name);
     	SimpleStringProperty s2 = new SimpleStringProperty(price);
     	SimpleStringProperty s3 = new SimpleStringProperty(category);
     	SimpleStringProperty s4 = new SimpleStringProperty(size);
     	SimpleStringProperty s5 = new SimpleStringProperty(color);
     	SimpleStringProperty s6 = new SimpleStringProperty(datePosted);
-    	
+    	this.itemNo = s0;
         this.name = s1;
         this.price = s2;
         this.category = s3;
@@ -36,7 +39,14 @@ public class Item  {
 
     public Item() {
     }
-
+    public void setItemNo(int intemNo) {
+    	SimpleIntegerProperty str0 = new SimpleIntegerProperty();
+        this.itemNo = str0;
+    }
+    public int getItemNo() {
+    	return itemNo.get();
+    	
+    }
     public String getName() {
         return name.get();
     }
