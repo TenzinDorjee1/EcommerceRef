@@ -1,5 +1,4 @@
 package application;
-import classes.Item;
 import classes.*;
 
 import java.io.IOException;
@@ -88,7 +87,7 @@ public class productcontroller {
     void loaddata(ActionEvent event) {
     	//System.out.println(super.abc);
     	
-       System.out.println("hello");
+      
 //       System.out.println(this.allItemsList.getItems());
     	allItemsList = new ItemsList();
     	Item ecommItemTest = new Item("pen", "12.56", "school", "n/a", "black", "2021");
@@ -129,6 +128,13 @@ public class productcontroller {
 //    	System.out.println(this.allItemsListHome.getItemsList());
 //    	
 //    }
+
+
+
+	public void setProduct(ItemsList itemList1) {
+		this.allItemsList = itemList1;
+		
+	}
     
     
    

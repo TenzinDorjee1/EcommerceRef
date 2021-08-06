@@ -59,6 +59,7 @@ public class LoginController {
 	    		FXMLLoader loader = new FXMLLoader();
 	    		AnchorPane homepage_parent = loader.load(getClass().getResource("Homepage.fxml"));
 	    		HomepageController controller = loader.getController();
+	    		
 	    		Scene homepage_scene = new Scene(homepage_parent);
 	    		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
 	    		homepage_scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());

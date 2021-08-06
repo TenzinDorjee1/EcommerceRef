@@ -23,6 +23,8 @@ public class SellItemController {
 	ItemsList itemlist1 = new ItemsList();
 	String abc="Hello";
 	
+	Scene goHomePage;
+	
 
     @FXML
     private TextField sizefield;
@@ -130,13 +132,8 @@ public class SellItemController {
 //		Parent root=(Parent)loader.load();
 //		HomepageController Controller1=loader.getController();
 //		Controller1.myfunction1(itemlist1);
-		
-    	AnchorPane homepage_parent = FXMLLoader.load(getClass().getResource("Homepage.fxml"));
-		Scene homepage_scene = new Scene(homepage_parent);
 		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-		homepage_scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-		homepage_scene.getRoot().setStyle("-fx-font-family: 'serif'");
-		app_stage.setScene(homepage_scene);
+		app_stage.setScene(goHomePage);
 		app_stage.show();
 		
 
@@ -176,6 +173,13 @@ public class SellItemController {
     	
     	
     }
+
+
+	public void passPage(Scene homeScene) {
+		goHomePage = homeScene;
+		
+		
+	}
 
    
  

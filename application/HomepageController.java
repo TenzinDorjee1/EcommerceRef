@@ -20,7 +20,7 @@ public class HomepageController {
     
     public AnchorPane buyingPage;
     
-   
+   private Scene sellingPage;
 
     @FXML
     private Button sellbutton;
@@ -30,14 +30,19 @@ public class HomepageController {
     @FXML
     void clickSell(ActionEvent event) throws IOException {
   
-    	
-    	AnchorPane sellingPage = FXMLLoader.load(getClass().getResource("SellView.fxml"));
-		Scene sellingPage_scene = new Scene(sellingPage);
+    	if (sellingPage == null) {
+    		
+    		FXMLLoader loader = new FXMLLoader((getClass().getResource("SellView.fxml")));
+    		AnchorPane sellingPagePane = loader.load();
+    		SellItemController controller = loader.getController();
+    		controller.passPage((Scene)((Node) event.getSource()).getScene());
+    		sellingPage = new Scene(sellingPagePane);
+    	}
+    	else {
 		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-		sellingPage_scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-		sellingPage_scene.getRoot().setStyle("-fx-font-family: 'serif'");
-		app_stage.setScene(sellingPage_scene);
+		app_stage.setScene(sellingPage);
 		app_stage.show();
+    	}
 		
 
     }
