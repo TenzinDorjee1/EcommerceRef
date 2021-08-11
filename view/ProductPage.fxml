@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProductController">
+   <children>
+      <Label layoutX="27.0" layoutY="23.0" text="PRODUCT PAGE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="457.0" layoutY="336.0" mnemonicParsing="false" onAction="#clickHomepage" prefHeight="37.0" prefWidth="116.0" style="-fx-background-color: purple;" text="Homepage" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <TableView fx:id="itemstable" layoutX="76.0" layoutY="84.0" prefHeight="232.0" prefWidth="449.0">
+        <columns>
+          <TableColumn fx:id="namecolumn" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="pricecolumn" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="catcolumn" prefWidth="75.0" text="category" />
+            <TableColumn fx:id="sizecolumn" prefWidth="75.0" text="size" />
+            <TableColumn fx:id="colorcolumn" prefWidth="75.0" text="color" />
+            <TableColumn fx:id="datecolumn" prefWidth="75.0" text="datePosted" />
+        </columns>
+      </TableView>
+      <HBox layoutX="549.0" layoutY="15.0" />
+      <Button layoutX="315.0" layoutY="336.0" mnemonicParsing="false" onAction="#loadData" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: purple;" text="load" textFill="#fffefe">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Label layoutX="15.0" layoutY="336.0" text="Click load to add the items from the selling page" textFill="#282828" />
+      <Label layoutX="14.0" layoutY="353.0" text="Click the Buy Button in the Hompage to select your item" />
+      <Label prefHeight="68.0" prefWidth="600.0" style="-fx-background-color: purple;" />
+      <Label layoutX="14.0" layoutY="12.0" text="PRODUCT PAGE" textFill="#fffdfd">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
