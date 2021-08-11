@@ -1,17 +1,17 @@
-<<<<<<< Updated upstream:Main.java
-public class Main extends HomePage{
-=======
 package application;
 
 /**
  * Runs the whole application
  */
+
 public class Main{
+	
+
 	/**
 	 * default main method
 	 * @param args
 	 */
->>>>>>> Stashed changes:application/Main.java
+
 	public static void main(String args[]) {
 		System.out.println("Welcome to our Ecommerce Application!");
 		HomePage UserTestIn = new HomePage();
@@ -22,5 +22,6 @@ public class Main{
 		}
 	}
 }
+
 
 
