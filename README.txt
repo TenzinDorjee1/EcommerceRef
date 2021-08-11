@@ -11,7 +11,7 @@ README
 	
 	
 	
-	* you should test the main branch for the 3rd iteration not the (new-ecommerce branch).
+	* you should test the main branch for the 3rd iteration not the (new-ecommerce-branch).
 
 Contact
 	if you have problems, questions, ideas, or suggestions, please contact us by our university
